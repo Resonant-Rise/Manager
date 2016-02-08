@@ -1,3 +1,7 @@
+<?php
+include('../login/includes/api.php');
+if(is_logged_in()) {
+?>
 <html>
 <head>
 	<style>
@@ -169,10 +173,10 @@ if (mysqli_num_rows($result) > 0) {
 		} ?>
 	</div>
 	<div class="rTableCell">
-		<?php echo "<a href='modupdated.php?modid=$id'>Mark Updated</a>"; ?>
+		<?php if(is_minLevel(2)) { echo "<a href='modupdated7.php?modid=$id'>Mark Updated</a>"; } else { echo "--"; } ?>
 	</div>
 	<div class="rTableCell">
-		<a href="nomod.php?modid=<?php echo $id; ?>" onclick="return confirm('Are you sure? \nThis will give Ryahn unwanted work to do. \nMake sure you are very sure!');">Mark Unwanted</a>
+		<?php if(is_minLevel(2)) { ?><a href="nomod.php?modid=<?php echo $id; ?>" onclick="return confirm('Are you sure? \nThis will give Ryahn unwanted work to do. \nMake sure you are very sure!');">Mark Unwanted</a><?php } else { echo "--"; } ?>
 	</div>
 </div>
        <?php
@@ -184,4 +188,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($con);
+} else {
+    echo "Only logged in users can see this page";
+}
 ?>
