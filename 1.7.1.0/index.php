@@ -1,3 +1,7 @@
+<?php
+include('../login/includes/api.php');
+if(is_logged_in()) {
+?>
 <html>
 <head>
 	<style>
@@ -184,4 +188,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($con);
+} else {
+    echo "Only logged in users can see this";
+}
 ?>
