@@ -173,10 +173,10 @@ if (mysqli_num_rows($result) > 0) {
 		} ?>
 	</div>
 	<div class="rTableCell">
-		<?php echo "<a href='modupdated7.php?modid=$id'>Mark Updated</a>"; ?>
+		<?php if(is_minLevel(2)) { echo "<a href='modupdated7.php?modid=$id'>Mark Updated</a>"; } else { echo "--"; } ?>
 	</div>
 	<div class="rTableCell">
-		<?php echo "<a href='nomod7.php?modid=$id'>Mark Unwanted</a>"; ?>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod7.php?modid=$id'>Mark Unwanted</a>"; } else { echo "--"; } ?>
 	</div>
 </div>
        <?php
