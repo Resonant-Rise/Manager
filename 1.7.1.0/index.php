@@ -169,10 +169,10 @@ if (mysqli_num_rows($result) > 0) {
 		} ?>
 	</div>
 	<div class="rTableCell">
-		<?php echo "<a href='modupdated.php?modid=$id'>Mark Updated</a>"; ?>
+		<?php echo "<a href='modupdated7.php?modid=$id'>Mark Updated</a>"; ?>
 	</div>
 	<div class="rTableCell">
-		<a href="nomod.php?modid=<?php echo $id; ?>" onclick="return confirm('Are you sure? \nThis will give Ryahn unwanted work to do. \nMake sure you are very sure!');">Mark Unwanted</a>
+		<?php echo "<a href='nomod7.php?modid=$id'>Mark Unwanted</a>"; ?>
 	</div>
 </div>
        <?php
