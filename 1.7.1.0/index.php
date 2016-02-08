@@ -99,7 +99,7 @@
 <?php
 include('../db.php');
 
-$query = "SELECT * FROM 170 ORDER BY update_time DESC";
+$query = "SELECT * FROM mods7 ORDER BY update_time DESC";
 $result = mysqli_query($con, $query);
 function isitempty($val){
     if (trim($val) === ''){$val = "1420132909";}

@@ -3,10 +3,10 @@ include('../db.php');
 
 $id = $_REQUEST['modid'];
 
-$query = "SELECT * FROM 170 where id = '$id'";
+$query = "SELECT * FROM mods7 where id = '$id'";
 $result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) > 0) {
-	$query2 = "UPDATE 170 SET last_updated=UNIX_TIMESTAMP(now()) WHERE id = '$id'";
+	$query2 = "UPDATE mods7 SET last_updated=UNIX_TIMESTAMP(now()) WHERE id = '$id'";
 	$result2 = mysqli_query($con, $query2) or die (mysqli_error($con));
 	while($row = mysqli_fetch_assoc($result)) {
 	echo $row['name'] . " updated! <br />";

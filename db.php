@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$db = 'mods';
+$dbuser = 'residez3_rrmods';
+$dbpass = 'GJfIr@#ZmVt;';
+$db = 'residez3_rrmods';
 
 $con = mysqli_connect($host,$dbuser,$dbpass,$db);
 

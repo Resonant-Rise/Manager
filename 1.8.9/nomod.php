@@ -3,10 +3,10 @@ include('../db.php');
 
 $id = $_REQUEST['modid'];
 
-$query = "SELECT * FROM 189 where id = '$id'";
+$query = "SELECT * FROM mods where id = '$id'";
 $result = mysqli_query($con, $query);
 if (mysqli_num_rows($result) > 0) {
-	$query2 = "UPDATE 189 SET added='1' WHERE id = '$id'";
+	$query2 = "UPDATE mods SET added='1' WHERE id = '$id'";
 	$result2 = mysqli_query($con, $query2) or die (mysqli_error($con));
 	while($row = mysqli_fetch_assoc($result)) {
 	echo $row['name'] . " marked as not included! <br />";
