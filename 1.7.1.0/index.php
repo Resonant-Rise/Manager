@@ -21,7 +21,7 @@
 	.rTableHeading {
 		display: table-header-group;
 		background-color: #ddd;
-	} <?
+	}
 	.rTableHead {
 		font-weight: bold;
 		text-decoration: underline;
