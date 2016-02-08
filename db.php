@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
 $dbuser = 'root';
-$dbpass = ';';
+$dbpass = '';
 $db = 'mods';
 
 $con = mysqli_connect($host,$dbuser,$dbpass,$db);

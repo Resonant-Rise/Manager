@@ -19,18 +19,18 @@ function isitempty($val){
 
 foreach($json as $item) {
 
-		$name = isitempty($item['name']);
+		$name = mysqli_real_escape_string($con, isitempty($item['name']));
 		$version = isitempty($item['version']);
-		$author = isitempty($item['author']);
+		$author = mysqli_real_escape_string($con, isitempty($item['author']));
 		$link = isitempty($item['longurl']);
 		$comment = isitempty($item['comment']);
 		$repo = isitempty($item['repo']);
 		$license = isitempty($item['license']);
 		$time = isitempty($item['lastupdated']);
 		foreach($item['dependencies'] as $dep) {
-            $dep2 = isitempty($dep);
+            $dep2 = mysqli_real_escape_string($con, isitempty($dep));
 
-$query = "INSERT INTO 170 (name,dependancies,version,author,link,repo,license,update_time) VALUES ('". $name."','". $dep2 ."','". $version."','". $author."','". $link."','". $repo ."','". $license ."','". $time."')
+$query = "INSERT INTO 170 (name,dependancies,version,author,link,repo,license,update_time) VALUES ('". $name ."','". $dep2 ."','". $version."','". $author."','". $link."','". $repo ."','". $license ."','". $time."')
 ON DUPLICATE KEY UPDATE
 version = VALUES(version),
 link = VALUES(link),
