@@ -100,5 +100,5 @@ $txt='http://www.curse.com/mc-mods/minecraft/236104-adobe-blocks-2';
       $w11=$matches[26][0];
       $c7=$matches[27][0];
       $c8=$matches[28][0];
-      echo $c1$word1$c2$word2$c3$word3$c4$d1$d2$d3$d4$d5$d6$c5$w1$w2$w3$w4$w5$c6$w6$w7$w8$w9$w10$w11$c7$c8;
+      echo $c1 $word1 $c2 $word2 $c3 $word3 $c4 $d1 $d2 $d3 $d4 $d5 $d6 $c5 $w1 $w2 $w3 $w4 $w5 $c6 $w6 $w7 $w8 $w9 $w10 $w11 $c7 $c8;
   }
