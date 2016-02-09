@@ -123,7 +123,7 @@ if (mysqli_num_rows($result) > 0) {
 	<td>
 		<?php echo date("n/j/y   g:i A", $timestamp); ?>
 	</td>
-	<td>
+	<td class="lastupdated">
 		<?php echo date("n/j/y  g:i A", $row['last_updated']); ?>
 	</td>
 	<td>
