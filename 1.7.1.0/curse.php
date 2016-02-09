@@ -15,7 +15,7 @@ foreach($json as $item) {
     $link = $item['longurl'];
     $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $link);
     if ($link == 'curse.com') {
-        $url = $['longurl'];
+        $url = $item['longurl'];
         $newurl = explode("http://www.curse.com", $url);
         echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
     } elseif ($link == 'curseforge.com') {
