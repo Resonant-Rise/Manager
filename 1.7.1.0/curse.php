@@ -19,11 +19,28 @@ foreach($json as $item) {
         $newurl = explode("http://www.curse.com", $url);
         echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
     } elseif ($link == 'curseforge.com') {
-        $response = get_headers($item['longurl']);
-        if($response[1] === 'HTTP/1.1 200 OK') {
-            $html = file_get_contents($item['longurl']);
-preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
-echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
-        }
+        function file_contents_exist($url, $response_code = 200)
+{
+    $headers = get_headers($url);
+
+    if (substr($headers[0], 9, 3) == $response_code)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
     }
 }
+      if(file_contents_exist($file_path))
+{
+    $file = file_get_contents($file_path);
+}
+//        $response = get_headers($item['longurl']);
+//        if($response[1] === 'HTTP/1.1 200 OK') {
+//            $html = file_get_contents($item['longurl']);
+//preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
+//echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
+        }
+    }
+
