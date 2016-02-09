@@ -12,7 +12,7 @@ if(is_logged_in()) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script type="text/javascript" src="https://bootswatch.com/bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="https://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/slate.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/slate.css"/>
 <!--
         <script>
       function load_home(){
