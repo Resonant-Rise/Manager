@@ -1,7 +1,5 @@
 <?php
-
-
-  $txt='http://www.curse.com/mc-mods/minecraft/236104-adobe-blocks-2';
+$txt='http://www.curse.com/mc-mods/minecraft/236104-adobe-blocks-2';
 
   $re1='.*?';	# Non-greedy match on filler
   $re2='.';	# Uninteresting: c
@@ -50,8 +48,27 @@
   $re45='(.)';	# Any Single Character 3
   $re46='((?:[a-z][a-z]+))';	# Word 3
   $re47='(.)';	# Any Single Character 4
+  $re48='(\\d)';	# Any Single Digit 1
+  $re49='(\\d)';	# Any Single Digit 2
+  $re50='(\\d)';	# Any Single Digit 3
+  $re51='(\\d)';	# Any Single Digit 4
+  $re52='(\\d)';	# Any Single Digit 5
+  $re53='(\\d)';	# Any Single Digit 6
+  $re54='(.)';	# Any Single Character 5
+  $re55='([a-z])';	# Any Single Word Character (Not Whitespace) 1
+  $re56='([a-z])';	# Any Single Word Character (Not Whitespace) 2
+  $re57='([a-z])';	# Any Single Word Character (Not Whitespace) 3
+  $re58='([a-z])';	# Any Single Word Character (Not Whitespace) 4
+  $re59='([a-z])';	# Any Single Word Character (Not Whitespace) 5
+  $re60='(.)';	# Any Single Character 6
+  $re61='([a-z])';	# Any Single Word Character (Not Whitespace) 6
+  $re62='([a-z])';	# Any Single Word Character (Not Whitespace) 7
+  $re63='([a-z])';	# Any Single Word Character (Not Whitespace) 8
+  $re64='([a-z])';	# Any Single Word Character (Not Whitespace) 9
+  $re65='([a-z])';	# Any Single Word Character (Not Whitespace) 10
+  $re66='([a-z])';	# Any Single Word Character (Not Whitespace) 11
 
-  if ($c=preg_match_all ("/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9.$re10.$re11.$re12.$re13.$re14.$re15.$re16.$re17.$re18.$re19.$re20.$re21.$re22.$re23.$re24.$re25.$re26.$re27.$re28.$re29.$re30.$re31.$re32.$re33.$re34.$re35.$re36.$re37.$re38.$re39.$re40.$re41.$re42.$re43.$re44.$re45.$re46.$re47."/is", $txt, $matches))
+  if ($c=preg_match_all ("/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9.$re10.$re11.$re12.$re13.$re14.$re15.$re16.$re17.$re18.$re19.$re20.$re21.$re22.$re23.$re24.$re25.$re26.$re27.$re28.$re29.$re30.$re31.$re32.$re33.$re34.$re35.$re36.$re37.$re38.$re39.$re40.$re41.$re42.$re43.$re44.$re45.$re46.$re47.$re48.$re49.$re50.$re51.$re52.$re53.$re54.$re55.$re56.$re57.$re58.$re59.$re60.$re61.$re62.$re63.$re64.$re65.$re66."/is", $txt, $matches))
   {
       $c1=$matches[1][0];
       $word1=$matches[2][0];
@@ -60,5 +77,24 @@
       $c3=$matches[5][0];
       $word3=$matches[6][0];
       $c4=$matches[7][0];
-      print "($c1) ($word1) ($c2) ($word2) ($c3) ($word3) ($c4) \n";
+      $d1=$matches[8][0];
+      $d2=$matches[9][0];
+      $d3=$matches[10][0];
+      $d4=$matches[11][0];
+      $d5=$matches[12][0];
+      $d6=$matches[13][0];
+      $c5=$matches[14][0];
+      $w1=$matches[15][0];
+      $w2=$matches[16][0];
+      $w3=$matches[17][0];
+      $w4=$matches[18][0];
+      $w5=$matches[19][0];
+      $c6=$matches[20][0];
+      $w6=$matches[21][0];
+      $w7=$matches[22][0];
+      $w8=$matches[23][0];
+      $w9=$matches[24][0];
+      $w10=$matches[25][0];
+      $w11=$matches[26][0];
+      print "($c1) ($word1) ($c2) ($word2) ($c3) ($word3) ($c4) ($d1) ($d2) ($d3) ($d4) ($d5) ($d6) ($c5) ($w1) ($w2) ($w3) ($w4) ($w5) ($c6) ($w6) ($w7) ($w8) ($w9) ($w10) ($w11) \n";
   }
