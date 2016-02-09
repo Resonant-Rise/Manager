@@ -1,5 +1,5 @@
 <?php
-$txt='http://www.curse.com/mc-mods/minecraft/236104-adobe-blocks-2';
+$txt='http://www.curse.com/mc-mods/Minecraft/237108-bedrock-replacer';
 
   $re1='.*?';	# Non-greedy match on filler
   $re2='.';	# Uninteresting: c
