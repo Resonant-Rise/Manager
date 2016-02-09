@@ -20,11 +20,4 @@ function isitempty($val){
     return $val;
 }
 
-foreach($json as $item) {
- echo $time['thumbnail'];
- foreach($item['download'] as $dl) {
-     echo $dl['url'];
-     echo $dl['name'];
-     echo $dl['version'];
- }
-}
+print_r($json);
