@@ -7284,3 +7284,6 @@ a.list-group-item-danger.active:focus {
     height: 100%;
     h
 }
+.lastupdated {
+    width: 60px;
+}
