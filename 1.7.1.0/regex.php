@@ -67,8 +67,10 @@ $txt='http://www.curse.com/mc-mods/minecraft/236104-adobe-blocks-2';
   $re64='([a-z])';	# Any Single Word Character (Not Whitespace) 9
   $re65='([a-z])';	# Any Single Word Character (Not Whitespace) 10
   $re66='([a-z])';	# Any Single Word Character (Not Whitespace) 11
+  $re67='(.)';	# Any Single Character 7
+  $re68='(.)';	# Any Single Character 8
 
-  if ($c=preg_match_all ("/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9.$re10.$re11.$re12.$re13.$re14.$re15.$re16.$re17.$re18.$re19.$re20.$re21.$re22.$re23.$re24.$re25.$re26.$re27.$re28.$re29.$re30.$re31.$re32.$re33.$re34.$re35.$re36.$re37.$re38.$re39.$re40.$re41.$re42.$re43.$re44.$re45.$re46.$re47.$re48.$re49.$re50.$re51.$re52.$re53.$re54.$re55.$re56.$re57.$re58.$re59.$re60.$re61.$re62.$re63.$re64.$re65.$re66."/is", $txt, $matches))
+  if ($c=preg_match_all ("/".$re1.$re2.$re3.$re4.$re5.$re6.$re7.$re8.$re9.$re10.$re11.$re12.$re13.$re14.$re15.$re16.$re17.$re18.$re19.$re20.$re21.$re22.$re23.$re24.$re25.$re26.$re27.$re28.$re29.$re30.$re31.$re32.$re33.$re34.$re35.$re36.$re37.$re38.$re39.$re40.$re41.$re42.$re43.$re44.$re45.$re46.$re47.$re48.$re49.$re50.$re51.$re52.$re53.$re54.$re55.$re56.$re57.$re58.$re59.$re60.$re61.$re62.$re63.$re64.$re65.$re66.$re67.$re68."/is", $txt, $matches))
   {
       $c1=$matches[1][0];
       $word1=$matches[2][0];
@@ -96,5 +98,7 @@ $txt='http://www.curse.com/mc-mods/minecraft/236104-adobe-blocks-2';
       $w9=$matches[24][0];
       $w10=$matches[25][0];
       $w11=$matches[26][0];
-      print "($c1) ($word1) ($c2) ($word2) ($c3) ($word3) ($c4) ($d1) ($d2) ($d3) ($d4) ($d5) ($d6) ($c5) ($w1) ($w2) ($w3) ($w4) ($w5) ($c6) ($w6) ($w7) ($w8) ($w9) ($w10) ($w11) \n";
+      $c7=$matches[27][0];
+      $c8=$matches[28][0];
+      echo $c1$word1$c2$word2$c3$word3$c4$d1$d2$d3$d4$d5$d6$c5$w1$w2$w3$w4$w5$c6$w6$w7$w8$w9$w10$w11$c7$c8;
   }
