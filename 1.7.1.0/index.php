@@ -149,7 +149,7 @@ if (mysqli_num_rows($result) > 0) {
 		<?php if ($row['repo']=="NULL") {
 			echo "N/A";
 		} else {
-			echo '<a href="' . $row['repo'] . '" class="btn btn-default btn-xs">>' . $repo . '</a>';
+			echo '<a href="' . $row['repo'] . '" class="btn btn-default btn-xs">' . $repo . '</a>';
 		}?>
 	</td>
 	<td>
