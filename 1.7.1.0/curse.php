@@ -20,7 +20,10 @@ foreach($json as $item) {
         echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
     } elseif ($link == 'curseforge.com') {
         $html = file_get_contents($item['longurl']);
+        $response = get_headers($item['longurl']);
+        if($response[1] === 'HTTP/1.1 200 OK') {
 preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
 echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
+        }
     }
 }
