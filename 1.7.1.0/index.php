@@ -96,7 +96,6 @@ if (mysqli_num_rows($result) > 0) {
     //Sets date and time to EST. Currently stored as UTC
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
-        echo strtotime($last);
     	$id = $row['id'];
     	$timestamp = $row['update_time'];
 
@@ -168,7 +167,56 @@ if (mysqli_num_rows($result) > 0) {
 	</td>
         </tr>
        <?php
-    }
+    } elseif (strtotime($update) > strtotime($last) and strtotime($last)!='1420132909') { ?>
+            <tr class="success">
+	<td>
+		<?php echo date("n/j/y   g:i A", $timestamp); ?>
+	</td>
+	<td class="lastupdated">
+		<?php echo date("n/j/y  g:i A", $row['last_updated']); ?>
+	</td>
+	<td>
+		<?php echo $row['name']; ?>
+	</td>
+	<td>
+		<?php echo $row['dependancies']; ?>
+	</td>
+	<td>
+		<?php echo $row['version']; ?>
+	</td>
+	<td>
+		<?php echo $row['author']; ?>
+	</td>
+	<td>
+		<?php if ($row['link']=="NULL") {
+			echo "N/A";
+		} else {
+			echo '<a href="' . $row['link'] . '" class="btn btn-primary btn-xs">' . $link . '</a>';
+		}?>
+	</td>
+	<td>
+		<?php if ($row['repo']=="NULL") {
+			echo "N/A";
+		} else {
+			echo '<a href="' . $row['repo'] . '" class="btn btn-default btn-xs">' . $repo . '</a>';
+		}?>
+	</td>
+	<td>
+		<?php if ($row['license']=="NULL") {
+			echo "N/A";
+		} else {
+			echo $row['license'];
+		} ?>
+	</td>
+	<td>
+		<?php if(is_minLevel(2)) { echo "<a href='modupdated7.php?modid=$id' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
+	</td>
+	<td>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod7.php?modid=$id' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
+	</td>
+        </tr>
+        <?php
+        }
   }
 }
 } else {
