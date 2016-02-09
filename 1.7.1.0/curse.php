@@ -34,13 +34,10 @@ foreach($json as $item) {
 
       if(file_contents_exist($url))
 {
-    $file = file_get_contents($url);
+    $html = file_get_contents($item['longurl']);
+preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
+echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
 }
-//        $response = get_headers($item['longurl']);
-//        if($response[1] === 'HTTP/1.1 200 OK') {
-//            $html = file_get_contents($item['longurl']);
-//preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
-//echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
         }
     }
 
