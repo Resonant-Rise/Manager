@@ -17,7 +17,7 @@ function isitempty($val){
 }
 
 foreach($json as $item) {
- echo '<img src="' . $time['thumbnail'] . 'alt="' . $item['title'] . '"><br />';
+ echo $time['thumbnail'];
  foreach($item['download'] as $dl) {
      echo $dl['url'];
      echo $dl['name'];
