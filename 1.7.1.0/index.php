@@ -1,116 +1,99 @@
 <?php
 include('../login/includes/api.php');
+include('../db.php');
 if(is_logged_in()) {
 ?>
-<html>
-<head>
-	<style>
-	body {
-		background-color: black;
-	}
-	.rTable {
-		display: table;
-		width: 100%;
-		color: white;
-	}
-	.rTableRow {
-		display: table-row;
-	}
-	.rTableRow:nth-of-type(odd) {
-		background: #01536D;
-	}
-	.rTableRow:nth-of-type(even) {
-		background: #003650;
-	}
-	.rTableHeading {
-		display: table-header-group;
-		background-color: #ddd;
-	}
-	.rTableHead {
-		font-weight: bold;
-		text-decoration: underline;
-	}
-	.rTableCell, .rTableHead {
-		display: table-cell;
-		padding: 2px 5px;
-		/*border: 1px solid #999999;*/
-	}
-	.rTableHeading {
-		display: table-header-group;
-		background-color: #ddd;
-		font-weight: bold;
-	}
-	.rTableFoot {
-		display: table-footer-group;
-		font-weight: bold;
-		background-color: #ddd;
-	}
-	.rTableBody {
-		display: table-row-group;
-	}
-	a:link {
-		color: red;
-		text-decoration: none;
-	}
-	a:visited {
-		color: #8E8E8E;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #009FFF;
-		text-decoration: none;
-	}
-	</style>
-</head>
-<body>
-	<strong><pan style="color:red;">ALL TIMES ARE EST (Eastern/GMT -5)</span></strong>
-<div class="rTable">
-	<div class="rTableRow">
-		<div class="rTableHead">
-			Mod Updated
-		</div>
-		<div class="rTableHead">
-			Last Added
-		</div>
-		<div class="rTableHead">
-			Mod Name
-		</div>
-		<div class="rTableHead">
-			Dependancies
-		</div>
-		<div class="rTableHead">
-			Version
-		</div>
-		<div class="rTableHead">
-			Author
-		</div>
-		<div class="rTableHead">
-			Mod Page
-		</div>
-		<div class="rTableHead">
-			Repo
-		</div>
-		<div class="rTableHead">
-			License
-		</div>
-		<div class="rTableHead">
-			&nbsp;
-		</div>
-		<div class="rTableHead">
-			&nbsp;
-		</div>
-	</div>
-<?php
-include('../db.php');
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Resonant Rise Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script type="text/javascript" src="https://bootswatch.com/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="https://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/slate.css"/>
+<!--
+        <script>
+      function load_home(){
+document.getElementById("indivload").innerHTML='<object type="text/html" data="1.8.9/index.php" ></object>';
+}
+</script>
+-->
+    </head>
+    <body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">RRM<br /><h5><small id="brand-small">Resonant Rise Manager</small></h5></a>
+    </div>
 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+<!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
+        <li class="active"><a href="1.7.1.0/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
+        <li><a href="1.8.9/index.php">1.8.9</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Mod Updated</th>
+      <th>Last Updated</th>
+      <th>Mod Name</th>
+      <th>Dependancies</th>
+      <th>Version</th>
+      <th>Author</th>
+      <th>Mod Page</th>
+      <th>Repo</th>
+      <th>License</th>
+      <th>Update?</th>
+      <th>Unwanted?</th>
+    </tr>
+  </thead>
+    <tbody>
+    <?php
+//Select data from existing data
 $query = "SELECT * FROM mods7 ORDER BY update_time DESC";
 $result = mysqli_query($con, $query);
+    //Checks to see if value is empty. This is for the date
 function isitempty($val){
     if (trim($val) === ''){$val = "1420132909";}
     return $val;
 }
 
+    //With data from database. Display. This also checks to make sure its not empty
 if (mysqli_num_rows($result) > 0) {
+    //Sets date and time to EST. Currently stored as UTC
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
     	$id = $row['id'];
@@ -124,61 +107,65 @@ if (mysqli_num_rows($result) > 0) {
 		$date1->setTimestamp($row['update_time']);
 		$update = $date1->format('M-d-Y H:i:s');
 
+        //Parse link to get FQDN
 		$link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $row['link']);
 
+        //Parse repo to get FQDN
 		$repo = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $row['repo']);
 
+        //If not marked as unwanted, display data
     	if ($row['added']==0){
 
+        //If the mod update timestamp is more than when it was last updated
     	if(strtotime($update) > strtotime($last)) {
     	?>
-    	<div class="rTableRow">
-	<div class="rTableCell">
+    	<tr>
+	<td>
 		<?php echo date("n/j/y   g:i A", $timestamp); ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php echo date("n/j/y  g:i A", $row['last_updated']); ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php echo $row['name']; ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php echo $row['dependancies']; ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php echo $row['version']; ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php echo $row['author']; ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php if ($row['link']=="NULL") {
 			echo "N/A";
 		} else {
 			echo '<a href="' . $row['link'] . '">' . $link . '</a>';
 		}?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php if ($row['repo']=="NULL") {
 			echo "N/A";
 		} else {
 			echo '<a href="' . $row['repo'] . '">' . $repo . '</a>';
 		}?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php if ($row['license']=="NULL") {
 			echo "N/A";
 		} else {
 			echo $row['license'];
 		} ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php if(is_minLevel(2)) { echo "<a href='modupdated7.php?modid=$id'>Mark Updated</a>"; } else { echo "--"; } ?>
-	</div>
-	<div class="rTableCell">
+	</td>
+	<td>
 		<?php if(is_minLevel(2)) { echo "<a href='nomod7.php?modid=$id'>Mark Unwanted</a>"; } else { echo "--"; } ?>
-	</div>
-</div>
+	</td>
+        </tr>
        <?php
     }
   }
@@ -192,3 +179,7 @@ mysqli_close($con);
     echo "Only logged in users can see this";
 }
 ?>
+  </tbody>
+</table>
+    </body>
+
