@@ -117,7 +117,7 @@ if (mysqli_num_rows($result) > 0) {
     	if ($row['added']==0){
 
         //If the mod update timestamp is more than when it was last updated
-    	if(strtotime($update) > strtotime($last)) {
+    	if(strtotime($last)=='1420132909') {
     	?>
     	<tr>
 	<td>
