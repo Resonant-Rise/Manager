@@ -142,7 +142,7 @@ if (mysqli_num_rows($result) > 0) {
 		<?php if ($row['link']=="NULL") {
 			echo "N/A";
 		} else {
-			echo '<a href="' . $row['link'] . '">' . $link . '</a>';
+			echo '<a href="' . $row['link'] . '" class="btn btn-primary btn-xs">' . $link . '</a>';
 		}?>
 	</td>
 	<td>
