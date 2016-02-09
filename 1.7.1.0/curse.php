@@ -32,9 +32,9 @@ foreach($json as $item) {
         echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
     } elseif ($link == 'curseforge.com') {
 
-      if(file_contents_exist($file_path))
+      if(file_contents_exist($url))
 {
-    $file = file_get_contents($file_path);
+    $file = file_get_contents($url);
 }
 //        $response = get_headers($item['longurl']);
 //        if($response[1] === 'HTTP/1.1 200 OK') {
