@@ -30,14 +30,14 @@ foreach($json as $item) {
         $url = $item['longurl'];
         $newurl = explode("http://www.curse.com", $url);
         echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
-    } elseif ($link == 'curseforge.com') {
-
-      if(file_contents_exist($url))
-{
-    $html = file_get_contents($item['longurl']);
-preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
-echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
-}
+//    } elseif ($link == 'curseforge.com') {
+//
+//      if(file_contents_exist($url))
+//{
+//    $html = file_get_contents($item['longurl']);
+//preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
+//echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
+//}
         }
     }
 
