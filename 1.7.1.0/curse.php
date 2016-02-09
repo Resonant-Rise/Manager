@@ -21,3 +21,8 @@ function isitempty($val){
 }
 
 echo $json['title'];
+echo '<br />';
+echo '<img src="' . $json['thumbnail'] . '"><br />';
+echo $json['download']['url'];
+echo '<br />';
+echo $json['download']['version'];
