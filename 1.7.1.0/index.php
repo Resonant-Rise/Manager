@@ -96,6 +96,7 @@ if (mysqli_num_rows($result) > 0) {
     //Sets date and time to EST. Currently stored as UTC
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
+        echo strtotime($last);
     	$id = $row['id'];
     	$timestamp = $row['update_time'];
 
