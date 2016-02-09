@@ -26,3 +26,9 @@ echo '<img src="' . $json['thumbnail'] . '" alt="Smiley face" height="57" width=
 echo $json['download']['url'];
 echo '<br />';
 echo $json['download']['version'];
+
+
+
+$html = file_get_contents("http://minecraft.curseforge.com/projects/project-ores");
+preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
+echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json';
