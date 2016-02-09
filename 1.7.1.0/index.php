@@ -37,8 +37,8 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
-        <li class="active"><a href="1.7.1.0/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
-        <li><a href="1.8.9/index.php">1.8.9</a></li>
+        <li class="active"><a href="../1.7.1.0/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
+        <li><a href="../1.8.9/index.php">1.8.9</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
