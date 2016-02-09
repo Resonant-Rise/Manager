@@ -10,16 +10,7 @@ $ch = curl_init();
 
     // $output contains the output string
   $json = json_decode(curl_exec($ch), true);
-
-foreach($json as $item) {
-    $link = $item['longurl'];
-    $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $link);
-    if ($link == 'curse.com') {
-        $url = $item['longurl'];
-        $newurl = explode("http://www.curse.com", $url);
-        echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
-    } elseif ($link == 'curseforge.com') {
-        function file_contents_exist($url, $response_code = 200)
+function file_contents_exist($url, $response_code = 200)
 {
     $headers = get_headers($url);
 
@@ -32,6 +23,15 @@ foreach($json as $item) {
         return FALSE;
     }
 }
+foreach($json as $item) {
+    $link = $item['longurl'];
+    $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $link);
+    if ($link == 'curse.com') {
+        $url = $item['longurl'];
+        $newurl = explode("http://www.curse.com", $url);
+        echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
+    } elseif ($link == 'curseforge.com') {
+
       if(file_contents_exist($file_path))
 {
     $file = file_get_contents($file_path);
