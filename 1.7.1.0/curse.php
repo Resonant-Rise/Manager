@@ -22,7 +22,7 @@ function isitempty($val){
 
 echo $json['title'];
 echo '<br />';
-echo '<img src="' . $json['thumbnail'] . '"><br />';
+echo '<img src="' . $json['thumbnail'] . '" alt="Smiley face" height="57" width="57"><br />';
 echo $json['download']['url'];
 echo '<br />';
 echo $json['download']['version'];
