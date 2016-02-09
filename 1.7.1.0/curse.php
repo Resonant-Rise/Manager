@@ -20,4 +20,6 @@ function isitempty($val){
     return $val;
 }
 
-print_r($json);
+foreach($json as $item) {
+    echo $item['title'];
+}
