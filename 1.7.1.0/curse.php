@@ -3,7 +3,7 @@
     $ch = curl_init();
 
     // set url
-    curl_setopt($ch, CURLOPT_URL, "bot.notenoughmods.com/1.8.9.json");
+    curl_setopt($ch, CURLOPT_URL, "https://widget.mcf.li/mc-mods/minecraft/229218-extracells2.json");
 
     //return the transfer as a string
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
