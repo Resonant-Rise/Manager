@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('../db.php');
  // create curl resource
     $ch = curl_init();
 
