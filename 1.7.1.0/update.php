@@ -30,7 +30,7 @@ foreach($json as $item) {
 		foreach($item['dependencies'] as $dep) {
             $dep2 = mysqli_real_escape_string($con, isitempty($dep));
 
-$query = "INSERT INTO 1710 (name,dependancies,version,author,link,repo,license,update_time) VALUES ('". $name ."','". $dep2 ."','". $version."','". $author."','". $link."','". $repo ."','". $license ."','". $time."')
+$query = "INSERT INTO mods7 (name,dependancies,version,author,link,repo,license,update_time) VALUES ('". $name ."','". $dep2 ."','". $version."','". $author."','". $link."','". $repo ."','". $license ."','". $time."')
 ON DUPLICATE KEY UPDATE
 version = VALUES(version),
 link = VALUES(link),
