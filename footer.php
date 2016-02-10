@@ -6,8 +6,9 @@
  } ?>
 
 <footer>
-    Resonant Rise Manager &copy; <?php echo auto_copyright('2015'); ?>
-Resonant Rise Manager is property of Resonant Rise. Resonant Rise is maintained by the Resonant Rise development team.
+    Resonant Rise Manager &copy; <?php echo auto_copyright('2015'); ?> <br />
+    Resonant Rise Manager is property of Resonant Rise. <br />
+    Resonant Rise is maintained by the Resonant Rise development team.
 </footer>
 </body>
 </html>
