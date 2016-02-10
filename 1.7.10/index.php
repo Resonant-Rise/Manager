@@ -114,7 +114,7 @@ if (mysqli_num_rows($result) > 0) {
         </tr>
        <?php
     } elseif (strtotime($update) > strtotime($last) and strtotime($last)!='1420132909') { ?>
-            <tr class="success">
+            <tr class="info">
 	<td>
 		<?php echo date("n/j/y   g:i A", $timestamp); ?>
 	</td>
