@@ -60,7 +60,7 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
       </form>
       <ul class="nav navbar-nav navbar-right">
         <?php if(is_logged_in()) { ?><li><a href="./login/logout.php">Logout</a></li>
-          } else { ?><li><a href="./login/login.php">Login</a></li>
+          <?php } else { ?><li><a href="./login/login.php">Login</a></li>
 
         <?php  } ?>
       </ul>
