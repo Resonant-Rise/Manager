@@ -83,7 +83,7 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
     <tbody>
     <?php
 //Select data from existing data
-$query = "SELECT * FROM 1710 ORDER BY update_time DESC";
+$query = "SELECT * FROM `1710` ORDER BY update_time DESC";
 $result = mysqli_query($con, $query);
     //Checks to see if value is empty. This is for the date
 function isitempty($val){
