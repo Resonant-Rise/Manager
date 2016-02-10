@@ -103,7 +103,7 @@ if(is_logged_in()) {
 <?php
 include('../db.php');
 
-$query = "SELECT * FROM mods ORDER BY update_time DESC";
+$query = "SELECT * FROM 189 ORDER BY update_time DESC";
 $result = mysqli_query($con, $query);
 function isitempty($val){
     if (trim($val) === ''){$val = "1420132909";}
