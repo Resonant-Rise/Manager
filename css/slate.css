@@ -5869,6 +5869,7 @@ button.list-group-item-danger.active:focus {
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
+  content: "\00d7";
 }
 .close:hover,
 .close:focus {
@@ -7285,14 +7286,8 @@ a.list-group-item-danger.active:focus {
 .panel-info .panel-heading {
   border-color: #000;
 }
-#indivload {
-    position: relative;
-    top: -20px;
-    width: 100%;
-    height: 100%;
-}
-#indivload, object {
-    width: 100%;
-    height: 100%;
+.cross {
+    display: inline-block;
+    content: "\00d7"; /* This will render the 'X' */
 }
 
