@@ -22,10 +22,19 @@ $ch = curl_init();
             $url = $item['longurl'];
             $newurl = explode("http://www.curse.com", $url);
             $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
-            $pjson = json_decode($parsed, true);
-            echo $pjson['title'] . "<br />" . '<img src="' . $pjson['thumbnail'] . '" alt="' . $pjson['title'] . '"><br />' . $pjson['download']['url'] . "<br /><br />";
         }
+        $ch1 = curl_init();
 
+        // set url
+        curl_setopt($ch1, CURLOPT_URL, $parsed);
+
+        //return the transfer as a string
+        curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch1,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+
+        // $output contains the output string
+           $pjson = json_decode(curl_exec($ch1), true);
+            echo $pjson['title'] . "<br />" . '<img src="' . $pjson['thumbnail'] . '" alt="' . $pjson['title'] . '"><br />' . $pjson['download']['url'] . "<br /><br />";
     //If its curseforge.com, process HTML
         if ($link == 'curseforge.com') {
         $html = @file_get_contents($item['longurl']);
