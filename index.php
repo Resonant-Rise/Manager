@@ -1,3 +1,6 @@
+<?php
+include('../login/includes/api.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
