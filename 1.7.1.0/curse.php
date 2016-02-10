@@ -21,7 +21,9 @@ $ch = curl_init();
         if ($link == 'curse.com') {
             $url = $item['longurl'];
             $newurl = explode("http://www.curse.com", $url);
-            echo 'https://widget.mcf.li' . $newurl[1] . '.json <br />';
+            $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
+            $pjson = json_decode($parsed, true);
+            echo $json['title'] . "<br />" . '<img src="' . $json['thumbnail'] . '" alt="' . $json['title'] . '"><br />' . $json['download']['url'] . "<br /><br />";
         }
 
     //If its curseforge.com, process HTML
