@@ -20,13 +20,13 @@ function isitempty($val){
 foreach($json as $item) {
 
 		$name = mysqli_real_escape_string($con, isitempty($item['name']));
-		$version = isitempty($item['version']);
+		$version = mysqli_real_escape_string($con, isitempty($item['version']));
 		$author = mysqli_real_escape_string($con, isitempty($item['author']));
-		$link = isitempty($item['longurl']);
-		$comment = isitempty($item['comment']);
-		$repo = isitempty($item['repo']);
-		$license = isitempty($item['license']);
-		$time = isitempty($item['lastupdated']);
+		$link = mysqli_real_escape_string($con, isitempty($item['longurl']));
+		$comment = mysqli_real_escape_string($con, isitempty($item['comment']));
+		$repo = mysqli_real_escape_string($con, isitempty($item['repo']));
+		$license = mysqli_real_escape_string($con, isitempty($item['license']));
+		$time = mysqli_real_escape_string($con, isitempty($item['lastupdated']));
 		foreach($item['dependencies'] as $dep) {
             $dep2 = mysqli_real_escape_string($con, isitempty($dep));
 
