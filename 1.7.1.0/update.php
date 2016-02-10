@@ -1,10 +1,10 @@
 <?php
-include('db.php');
+include('../db.php');
  // create curl resource
     $ch = curl_init();
 
     // set url
-    curl_setopt($ch, CURLOPT_URL, "http://bot.notenoughmods.com/1.7.10.json");
+    curl_setopt($ch, CURLOPT_URL, "bot.notenoughmods.com/1.7.10.json");
 
     //return the transfer as a string
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -30,7 +30,7 @@ foreach($json as $item) {
 		foreach($item['dependencies'] as $dep) {
             $dep2 = mysqli_real_escape_string($con, isitempty($dep));
 
-$query = "INSERT INTO 1710 (name,dependancies,version,author,link,repo,license,update_time,last_updated,added) VALUES ('". $name ."','". $dep2 ."','". $version."','". $author."','". $link."','". $repo ."','". $license ."','". $time."')
+$query = "INSERT INTO 1710 (name,dependancies,version,author,link,repo,license,update_time) VALUES ('". $name ."','". $dep2 ."','". $version."','". $author."','". $link."','". $repo ."','". $license ."','". $time."')
 ON DUPLICATE KEY UPDATE
 version = VALUES(version),
 link = VALUES(link),
@@ -40,7 +40,7 @@ update_time = VALUES(update_time),
 added = VALUES(added)
 ";
 
-$q = mysqli_query($con, $query) or die (mysqli_error($con));
+mysqli_query($con, $query) or die (mysqli_error($con));
 
 }
 }
