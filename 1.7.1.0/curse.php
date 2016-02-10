@@ -7,7 +7,7 @@ $result = mysqli_query($con, $query);
     //Sets date and time to EST. Currently stored as UTC
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
-        $link = row['link'];
+        $link = $row['link'];
 
         //Process for FQDN
         $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $link);
