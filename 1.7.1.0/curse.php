@@ -23,6 +23,7 @@ $result = mysqli_query($con, $query);
     // $output contains the output string
   $json = json_decode(curl_exec($ch), true);
         echo $json['title'];
+         echo $parsed . '<br />';
 //            $ch1 = curl_init();
 //
 //        // set url
@@ -36,7 +37,7 @@ $result = mysqli_query($con, $query);
 //           $pjson = json_decode(curl_exec($ch1), true);
 //            echo $pjson['title'] . "<br />" . '<img src="' . $pjson['thumbnail'] . '" alt="' . $pjson['title'] . '"><br />' . $pjson['download']['url'] . "<br /><br />";
         }
-        echo $parsed . '<br />';
+
 
     //If its curseforge.com, process HTML
 //        if ($link == 'curseforge.com') {
