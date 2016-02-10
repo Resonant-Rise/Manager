@@ -6,7 +6,7 @@ if(is_logged_in()) {
 ?>
 
         <div class="alert alert-dismissible alert-warning">
-  <button type="button" class="close" data-dismiss="alert"><div class="cross"></div></button>
+  <button type="button" class="close" data-dismiss="alert"><div class="cross">x</div></button>
   <h4>ATTENTION!</h4>
   <p>All times presented here, are in Eastern Time (GMT -5)</p>
 </div>
