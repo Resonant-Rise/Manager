@@ -14,7 +14,7 @@ $result = mysqli_query($con, $query);
     $ch = curl_init();
 
     // set url
-    curl_setopt($ch, CURLOPT_URL, "https://widget.mcf.li/mc-mods/minecraft/227049-iron-backpacks.json");
+    curl_setopt($ch, CURLOPT_URL, $parsed);
 
     //return the transfer as a string
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
