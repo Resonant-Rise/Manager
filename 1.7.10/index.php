@@ -66,6 +66,11 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
     </div>
   </div>
 </nav>
+        <div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&close;</button>
+  <h4>ATTENTION!</h4>
+  <p>All times presented here, are in Eastern Time (GMT -5)</p>
+</div>
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
