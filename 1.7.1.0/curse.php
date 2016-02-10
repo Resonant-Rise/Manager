@@ -7,16 +7,14 @@ $result = mysqli_query($con, $query);
     //Sets date and time to EST. Currently stored as UTC
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
-        $url = $row['link'];
 
         //Process for FQDN
-        $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $url);
+        $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $row['link']);
         //If its curse.com, process normally
-        if ($url == 'curse.com') {
-            $newurl = explode("http://www.curse.com", $url);
+        if ($link == 'curse.com') {
+            $newurl = explode("http://www.curse.com", $row['link']);
             $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
-        }
-        $ch1 = curl_init();
+            $ch1 = curl_init();
 
         // set url
         curl_setopt($ch1, CURLOPT_URL, $parsed);
@@ -28,6 +26,8 @@ $result = mysqli_query($con, $query);
         // $output contains the output string
            $pjson = json_decode(curl_exec($ch1), true);
             echo $pjson['title'] . "<br />" . '<img src="' . $pjson['thumbnail'] . '" alt="' . $pjson['title'] . '"><br />' . $pjson['download']['url'] . "<br /><br />";
+        }
+
     //If its curseforge.com, process HTML
 //        if ($link == 'curseforge.com') {
 //        $html = @file_get_contents($item['longurl']);
