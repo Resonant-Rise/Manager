@@ -1,26 +1,19 @@
 <?php
-$ch = curl_init();
-
-        // set url
-        curl_setopt($ch, CURLOPT_URL, "bot.notenoughmods.com/1.8.9.json");
-
-        //return the transfer as a string
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
-
-        // $output contains the output string
-      $json = json_decode(curl_exec($ch), true);
-
-    //Get itesm from NEM API
-    foreach($json as $item) {
-        $link = $item['longurl'];
+include('../db.php');
+//Select data from existing data
+$query = "SELECT * FROM mods7 ORDER BY update_time DESC";
+$result = mysqli_query($con, $query);
+    if (mysqli_num_rows($result) > 0) {
+    //Sets date and time to EST. Currently stored as UTC
+	date_default_timezone_set('America/New_York');
+    while($row = mysqli_fetch_assoc($result)) {
+        $link = row['link'];
 
         //Process for FQDN
         $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $link);
         //If its curse.com, process normally
         if ($link == 'curse.com') {
-            $url = $item['longurl'];
-            $newurl = explode("http://www.curse.com", $url);
+            $newurl = explode("http://www.curse.com", $link);
             $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
         }
         $ch1 = curl_init();
