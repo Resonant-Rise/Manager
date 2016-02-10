@@ -1,7 +1,7 @@
 <?php
 include('./header.php');
 ?>
-<div class="bs-component">
+<div class="container">
     <div class="panel panel-primary">
     <div class="panel-heading">
     <h3 class="panel-title">Panel primary</h3>
