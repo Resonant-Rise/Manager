@@ -29,14 +29,15 @@ $result = mysqli_query($con, $query);
            $pjson = json_decode(curl_exec($ch1), true);
             echo $pjson['title'] . "<br />" . '<img src="' . $pjson['thumbnail'] . '" alt="' . $pjson['title'] . '"><br />' . $pjson['download']['url'] . "<br /><br />";
     //If its curseforge.com, process HTML
-        if ($link == 'curseforge.com') {
-        $html = @file_get_contents($item['longurl']);
-        //Check if URL gives 404
-        if (empty($html)){
-            return;
-        } else {
-            preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
-            echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
+//        if ($link == 'curseforge.com') {
+//        $html = @file_get_contents($item['longurl']);
+//        //Check if URL gives 404
+//        if (empty($html)){
+//            return;
+//        } else {
+//            preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
+//            echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
+    }
     }
     }
     }
