@@ -34,10 +34,11 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
 <!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
         <li class="active"><a href="1.7.1.0/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
         <li><a href="1.8.9/index.php">1.8.9</a></li>
+        <?php if(is_minLevel(2)) { ?>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
+             <?php if(is_minLevel(3)) { ?> <li><a href="../login/settings.php?page=main">Permissions</a></li> <?php } ?>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -46,6 +47,7 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
+          <?php } ?>
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
