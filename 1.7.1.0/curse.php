@@ -26,7 +26,7 @@ $ch = curl_init();
 
     //If its curseforge.com, process HTML
         if ($link == 'curseforge.com') {
-        $html = file_get_contents($item['longurl']);
+        $html = @file_get_contents($item['longurl']);
         //Check if URL gives 404
         if (empty($html)){
             return;
