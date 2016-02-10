@@ -10,7 +10,7 @@ include('./login/includes/api.php');
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <script type="text/javascript" src="https://bootswatch.com/bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="https://bootswatch.com/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/slate.css"/>
+        <link rel="stylesheet" type="text/css" href="http://mods.resonant-rise.com/css/slate.css"/>
 <!--
         <script>
       function load_home(){
@@ -35,13 +35,13 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
-        <li class="active"><a href="1.7.1.0/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
-        <li><a href="1.8.9/index.php">1.8.9</a></li>
+        <li class="active"><a href="http://mods.resonant-rise.com/1.7.1.0/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
+        <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
         <?php if(is_minLevel(2)) { ?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-             <?php if(is_minLevel(3)) { ?> <li><a href="../login/settings.php?page=main">Permissions</a></li> <?php } ?>
+             <?php if(is_minLevel(3)) { ?> <li><a href="http://mods.resonant-rise.com/login/settings.php?page=main">Permissions</a></li> <?php } ?>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
@@ -59,8 +59,8 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <?php if(is_logged_in()) { ?><li><a href="./login/logout.php">Logout</a></li>
-          <?php } else { ?><li><a href="./login/login.php">Login</a></li>
+        <?php if(is_logged_in()) { ?><li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
+          <?php } else { ?><li><a href="http://mods.resonant-rise.com/login/login.php">Login</a></li>
 
         <?php  } ?>
       </ul>
