@@ -43,7 +43,7 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-             <?php if(is_minLevel(3)) { ?> <li><a href="#">Permissions</a></li> <?php } ?>
+             <?php if(is_minLevel(3)) { ?> <li><a href="../login/settings.php?page=main">Permissions</a></li> <?php } ?>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
