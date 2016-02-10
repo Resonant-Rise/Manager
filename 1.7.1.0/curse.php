@@ -23,7 +23,7 @@ $ch = curl_init();
             $newurl = explode("http://www.curse.com", $url);
             $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
             $pjson = json_decode($parsed, true);
-            echo $json['title'] . "<br />" . '<img src="' . $json['thumbnail'] . '" alt="' . $json['title'] . '"><br />' . $json['download']['url'] . "<br /><br />";
+            echo $pjson['title'] . "<br />" . '<img src="' . $pjson['thumbnail'] . '" alt="' . $pjson['title'] . '"><br />' . $pjson['download']['url'] . "<br /><br />";
         }
 
     //If its curseforge.com, process HTML
