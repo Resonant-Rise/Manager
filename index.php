@@ -2,9 +2,11 @@
 include('./header.php');
 ?>
 <div class="bs-component">
+    <div class="panel panel-primary">
     <div class="panel-heading">
-    <h3 class="panel-title panel-primary">Panel primary</h3>
+    <h3 class="panel-title">Panel primary</h3>
   </div>
+    </div>
     <div class="jumbotron">
   <h1>Jumbotron</h1>
   <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
