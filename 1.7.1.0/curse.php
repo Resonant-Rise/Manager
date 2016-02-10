@@ -38,6 +38,6 @@ $result = mysqli_query($con, $query);
 //            preg_match('%<li class="view-on-curse">\s+<a href="http:\/\/curse\.com\/project\/(?P<id>.*)">\s+View on Curse\.com\s+<\/a>\s+<\/li>%', $html, $matches);
 //            echo 'https://widget.mcf.li/project/' . $matches['id'] . '.json <br />';
 //    }
-    }
+//    }
     }
     }
