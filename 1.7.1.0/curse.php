@@ -14,7 +14,9 @@ $result = mysqli_query($con, $query);
         if ($link == 'curse.com') {
             $newurl = explode("http://www.curse.com", $row['link']);
             $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
-            echo $parsed;
+            $url = file_get_contents($parsed);
+            $cursej = json_decode($content, true);
+            echo $cursej['title'];
 //            $ch1 = curl_init();
 //
 //        // set url
