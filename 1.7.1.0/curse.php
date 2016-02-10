@@ -7,13 +7,13 @@ $result = mysqli_query($con, $query);
     //Sets date and time to EST. Currently stored as UTC
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
-        $link = $row['link'];
+        $url = $row['link'];
 
         //Process for FQDN
-        $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $link);
+        $link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $url);
         //If its curse.com, process normally
-        if ($link == 'curse.com') {
-            $newurl = explode("http://www.curse.com", $link);
+        if ($url == 'curse.com') {
+            $newurl = explode("http://www.curse.com", $url);
             $parsed = 'https://widget.mcf.li' . $newurl[1] . '.json';
         }
         $ch1 = curl_init();
