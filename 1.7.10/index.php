@@ -3,7 +3,7 @@ include('../db.php');
 include('../header.php');
 if(is_logged_in()) {
 ?>
-
+<div class="table-content">
         <div class="alert alert-dismissible alert-warning">
   <button type="button" class="close" data-dismiss="alert"><div class="cross">x</div></button>
   <h4>ATTENTION!</h4>
@@ -14,7 +14,7 @@ if(is_logged_in()) {
           <input type="text" class="form-control" placeholder="Search">
         </div>
       </form>
-<div class="table-content">
+
 <table id="table" class="table table-striped table-hover">
   <thead>
     <tr>
