@@ -1,5 +1,6 @@
 <?php
 include('./login/includes/api.php');
+echo realpath(dirname(__FILE__));
 ?>
 <!DOCTYPE html>
 <html lang="en">
