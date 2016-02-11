@@ -58,7 +58,6 @@ $('#search').keyup(function() {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
-          <?php if
         <li class="active"><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
         <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
         <?php if(is_minLevel(2)) { ?>
