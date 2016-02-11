@@ -80,7 +80,8 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
       </form>
 -->
       <ul class="nav navbar-nav navbar-right">
-         <?php if (is_logged_in()) { ?>
+         <?php $username = userValue(null, "username");
+          if (is_logged_in()) { ?>
           <li>Welcome, <?php echo $username; ?>!</li>
           <li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
           <?php } else { ?>
