@@ -80,10 +80,13 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
       </form>
 -->
       <ul class="nav navbar-nav navbar-right">
-        <?php if(is_logged_in()) { ?><li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
-          <?php } else { ?><li><a href="http://mods.resonant-rise.com/login/login.php">Login</a></li>
-
-        <?php  } ?>
+         <?php if (is_logged_in()) { ?>
+          <li>Welcome, <?php echo $username; ?>!</li>
+          <li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
+          <?php } else { ?>
+          <li>Welcome, Guest!</li>
+          <li><a href="http://mods.resonant-rise.com/login/login.php">Login</a></li>
+          <?php } ?>
       </ul>
     </div>
   </div>
