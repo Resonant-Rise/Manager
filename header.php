@@ -52,9 +52,12 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
           <?php if ($_SERVER['REQUEST_URI'] == '/1.7.10/index.php') { ?>
         <li class="active"><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
         <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
+          <?php } elseif ($_SERVER['REQUEST_URI'] == '/1.8.9/index.php') { ?>
+        <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 </a></li>
+        <li class="active"><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9 <span class="sr-only">(current)</span></a></li>
           <?php } else { ?>
-        <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
+          <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10</a></li>
+        <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
           <?php } ?>
         <?php if(is_minLevel(2)) { ?>
         <li class="dropdown">
@@ -85,7 +88,7 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
           <li class="user-greet"><span class="badge2">Welcome, <?php echo $username; ?>!</span></li>
           <li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
           <?php } else { ?>
-          <li class="user-greet">Welcome, Guest!</li>
+          <li class="user-greet"><span class="badge2">Welcome, Guest!</span></li>
           <li><a href="http://mods.resonant-rise.com/login/login.php">Login</a></li>
           <?php } ?>
       </ul>
