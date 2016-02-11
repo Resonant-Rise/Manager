@@ -1,5 +1,6 @@
 <?php
-include('/mods/login/includes/api.php');
+include('./login/includes/api.php');
+include('../login/includes/api.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
