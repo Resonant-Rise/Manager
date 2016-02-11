@@ -13,7 +13,6 @@ if(is_logged_in()) {
         <div class="form-group">
           <input type="text" class="form-control" id"search" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
       </form>
 <table id="table" class="table table-striped table-hover">
   <thead>
