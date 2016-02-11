@@ -58,8 +58,13 @@ $('#search').keyup(function() {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
+          <?php if ($_SERVER['REQUEST_URI'] == '/1.7.10/index.php') { ?>
         <li class="active"><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
         <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
+          <?php } else { ?>
+        <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
+          <?php } ?>
         <?php if(is_minLevel(2)) { ?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
@@ -92,4 +97,4 @@ $('#search').keyup(function() {
     </div>
   </div>
 </nav>
-<?php echo $_SERVER['REQUEST_URI']; ?>
+
