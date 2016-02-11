@@ -2,7 +2,7 @@
 include('../db.php');
 
 $id = $_REQUEST['modid'];
-$muser = $_REQUEST['user'];
+$muser = $_REQUEST['muser'];
 
 $query = "SELECT * FROM `1710` where id = '$id'";
 $result = mysqli_query($con, $query);
