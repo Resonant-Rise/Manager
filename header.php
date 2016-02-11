@@ -18,7 +18,7 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
 }
 </script>
 -->
-        <script type="text/javascript">
+        <script type="application/javascript">
         var $rows = $('#table tr');
 $('#search').keyup(function() {
 
