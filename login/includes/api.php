@@ -2,10 +2,10 @@
 define('ROOT', dirname(__FILE__));
 
 if(!isset($con)) {
-	require(ROOT .'/../config.php');
+	require('/home/residez3/public_html/mods/login/config.php');
 }
 if(!isset($titles)) {
-	require(ROOT .'/../lang/'. $language .'.php');
+	require('/home/residez3/public_html/mods/login/lang/english.php');
 }
 if(!function_exists('getSetting')) {
 	require(ROOT .'/functions.php');
