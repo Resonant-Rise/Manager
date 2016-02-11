@@ -171,8 +171,11 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($con);
-} else {
-    echo "Only logged in users can see this";
+} else { ?>
+        <div class="alert alert-danger">
+  <strong>Oh snap!</strong> Only logged in users can see this page. Please login!
+</div>
+    <?php
 }
 ?>
   </tbody>
