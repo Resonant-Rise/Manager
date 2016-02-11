@@ -1,6 +1,6 @@
 <?php
-include('../db.php');
-include('../header.php');
+include('./db.php');
+include('./header.php');
 if(is_logged_in()) {
 ?>
 <div class="container">
