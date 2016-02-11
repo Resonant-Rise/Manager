@@ -10,7 +10,7 @@ if(is_logged_in()) {
   <h4>ATTENTION!</h4>
   <p>All times presented here, are in Eastern Time (GMT -5)</p>
 </div>
-<table class="table table-striped table-hover ">
+<table class="table table-striped table-hover" id="table">
   <thead>
     <tr>
       <th>Mod Updated</th>
