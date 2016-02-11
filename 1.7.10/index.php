@@ -3,7 +3,7 @@ include('../db.php');
 include('../header.php');
 if(is_logged_in()) {
 ?>
-<div class="table-content">
+<div class="container">
         <div class="alert alert-dismissible alert-warning">
   <button type="button" class="close" data-dismiss="alert"><div class="cross">x</div></button>
   <h4>ATTENTION!</h4>
