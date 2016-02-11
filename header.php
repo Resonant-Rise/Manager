@@ -1,7 +1,8 @@
 <?php
 if (file_exists('./login/includes/api.php')) {
 include('./login/includes/api.php');
-} elseif (file_exists('../login/includes/api.php')) {
+}
+if (file_exists('../login/includes/api.php')) {
 include('../login/includes/api.php');
 }
 ?>
