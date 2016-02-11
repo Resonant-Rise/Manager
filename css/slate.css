@@ -4496,6 +4496,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-left {
     float: left !important;
+    padding-bottom: 5px;
+    margin-left: 1px !important;
   }
   .navbar-right {
     float: right !important;
@@ -7289,5 +7291,9 @@ a.list-group-item-danger.active:focus {
 .cross {
     display: inline-block;
     content: "\00d7"; /* This will render the 'X' */
+}
+.table-content {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 

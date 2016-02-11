@@ -14,6 +14,7 @@ if(is_logged_in()) {
           <input type="text" class="form-control" id"search" placeholder="Search">
         </div>
       </form>
+<div class="table-content">
 <table id="table" class="table table-striped table-hover">
   <thead>
     <tr>
@@ -180,5 +181,6 @@ mysqli_close($con);
 ?>
   </tbody>
 </table>
+</div>
     <?php include('../footer.php');
 
