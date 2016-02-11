@@ -1,6 +1,5 @@
 <?php
-include('./login/includes/api.php');
-echo realpath(dirname(__FILE__));
+include('/home/residez3/public_html/mods/login/includes/api.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
