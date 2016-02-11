@@ -7,4 +7,7 @@ if(is_logged_in()) {
 <p>This is a test</p>
 
 </div>
-<?php include('../footer.php');
+
+<?php
+}
+include('../footer.php');
