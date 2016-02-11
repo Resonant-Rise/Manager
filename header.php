@@ -43,7 +43,7 @@ $('#search').keyup(function() {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">RRM<br /><h5><small id="brand-small">Resonant Rise Manager</small></h5></a>
+      <a class="navbar-brand" href="http://mods.resonant-rise.com">RRM<br /><h5><small id="brand-small">Resonant Rise Manager</small></h5></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
