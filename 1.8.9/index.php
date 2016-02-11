@@ -9,7 +9,6 @@ if(is_logged_in()) {
   <h4>ATTENTION!</h4>
   <p>All times presented here, are in Eastern Time (GMT -5)</p>
 </div>
-<input type="text" id="search" placeholder="Type to search">
 <table id="table" class="table table-striped table-hover">
   <thead>
     <tr>
