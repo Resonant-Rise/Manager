@@ -82,10 +82,10 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
       <ul class="nav navbar-nav navbar-right nav-pills">
          <?php $username = userValue(null, "username");
           if (is_logged_in()) { ?>
-          <li><span class="badge">Welcome, <?php echo $username; ?>!</span></li>
+          <li class="user-greet"><span class="badge">Welcome, <?php echo $username; ?>!</span></li>
           <li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
           <?php } else { ?>
-          <li>Welcome, Guest!</li>
+          <li class="user-greet">Welcome, Guest!</li>
           <li><a href="http://mods.resonant-rise.com/login/login.php">Login</a></li>
           <?php } ?>
       </ul>

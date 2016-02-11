@@ -7296,4 +7296,9 @@ a.list-group-item-danger.active:focus {
     padding-left: 10px;
     padding-right: 10px;
 }
+li.user-greet {
+    padding-top: 12px;
+    padding-right: 20px;
+    color: darkcyan;
+}
 
