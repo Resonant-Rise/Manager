@@ -11,7 +11,7 @@ if(is_logged_in()) {
 </div>
 <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" id"search" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search">
         </div>
       </form>
 <div class="table-content">
@@ -111,10 +111,10 @@ if (mysqli_num_rows($result) > 0) {
 		} ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='modupdated7.php?modid=$id' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=$id' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='nomod7.php?modid=$id' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=$id' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
 	</td>
         </tr>
        <?php
