@@ -1,5 +1,4 @@
 <?php
-include('../login/includes/api.php');
 include('../db.php');
 include('../header.php');
 if(is_logged_in()) {
