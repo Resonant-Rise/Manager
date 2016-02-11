@@ -79,10 +79,10 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
 -->
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right nav-pills">
          <?php $username = userValue(null, "username");
           if (is_logged_in()) { ?>
-          <li>Welcome, <?php echo $username; ?>!</li>
+          <li><span class="badge">Welcome, <?php echo $username; ?>!</span></li>
           <li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
           <?php } else { ?>
           <li>Welcome, Guest!</li>
