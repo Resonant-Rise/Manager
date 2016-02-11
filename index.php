@@ -4,13 +4,15 @@ include('./header.php');
 <div class="container">
     <div class="panel2 panel-primary">
     <div class="panel-heading">
-    <h3 class="panel-title">Panel primary</h3>
+    <h3 class="panel-title">Welcome!</h3>
   </div>
     </div>
     <div class="jumbotron">
-  <h1>Jumbotron</h1>
-  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+  <h1>Oh, Hello there</h1>
+  <p>Resonant Rise Manager is an application built by hand and with love from the Resonant Rise Development Team.</p>
+        <p>With this application, it allows the developers to update the pack a little quicker.</p>
+        <p>Plus, there are a lot of features coming soon.</p>
+<!--  <p><a class="btn btn-primary btn-lg">Learn more</a></p>-->
 </div>
 </div>
 
