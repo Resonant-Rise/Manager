@@ -66,12 +66,14 @@ $('#search').keyup(function() {
         </li>
           <?php } ?>
       </ul>
+<!--
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" id"search" placeholder="Search">
         </div>
-<!--        <button type="submit" class="btn btn-default">Submit</button>-->
+        <button type="submit" class="btn btn-default">Submit</button>
       </form>
+-->
       <ul class="nav navbar-nav navbar-right">
         <?php if(is_logged_in()) { ?><li><a href="http://mods.resonant-rise.com/login/logout.php">Logout</a></li>
           <?php } else { ?><li><a href="http://mods.resonant-rise.com/login/login.php">Login</a></li>
