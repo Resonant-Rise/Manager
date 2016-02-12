@@ -1,3 +1,8 @@
+<html>
+<head>
+<META http-equiv="refresh" content="1;URL=http://mods.resonant-rise.com/1.7.10/index.php">
+</head>
+</html>
 <?php
 include('../db.php');
 include('../login/includes/api.php');
