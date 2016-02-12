@@ -1,3 +1,16 @@
+<html>
+<head>
+    <script>
+    $(document).ready(function () {
+    // Handler for .ready() called.
+    window.setTimeout(function () {
+        location.href = "http://mods.resonant-rise.com/1.7.10/index.php";
+    }, 2000);
+});
+    </script>
+</head>
+</html>
+
 <?php
 include('../db.php');
 include('../login/includes/api.php');
