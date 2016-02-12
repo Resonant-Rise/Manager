@@ -8,8 +8,8 @@
 <footer>
     Resonant Rise Manager &copy; <?php echo auto_copyright('2015'); ?> <br />
     Resonant Rise Manager is property of Resonant Rise. <br />
-    Resonant Rise is maintained by the Resonant Rise development team.
-    Minecraft mod info pulled from <a href="https://bot.notenoughmods.com/">NotEnoughMods</a>. <br /><div id="heart"></div> You guys
+    Resonant Rise is maintained by the Resonant Rise development team.<br />
+    Minecraft mod info pulled from <a href="https://bot.notenoughmods.com/">NotEnoughMods</a>. <div id="heart"></div> You guys
 </footer>
 </body>
 </html>
