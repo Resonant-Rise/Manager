@@ -7317,8 +7317,9 @@ a.list-group-item-danger.active:focus {
 }
 #heart {
     position: relative;
-    width: 100px;
-    height: 90px;
+    width: 15px;
+    height: 11px;
+	display: inline-block;
 }
 #heart:before,
 #heart:after {
@@ -7355,4 +7356,3 @@ a.list-group-item-danger.active:focus {
          -o-transform-origin: 100% 100%;
             transform-origin :100% 100%;
 }
-
