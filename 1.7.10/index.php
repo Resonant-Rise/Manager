@@ -50,10 +50,14 @@ if (mysqli_num_rows($result) > 0) {
     	$date = new DateTime();
 		$date->setTimestamp($row['last_updated']);
 		$last = $date->format('M-d-Y H:i:s');
+        $ldate = $date->format('n/j/y');
+        $ltime = $date->format('g:i A');
 
 		$date1 = new DateTime();
 		$date1->setTimestamp($row['update_time']);
 		$update = $date1->format('M-d-Y H:i:s');
+        $udate = $date1->format('n/j/y');
+        $utime = $date1->format('g:i A');
 
         //Parse link to get FQDN
 		$link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $row['link']);
@@ -69,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
     	?>
     	<tr>
 	<td>
-		<?php echo date("n/j/y   g:i A", $timestamp); ?>
+		<?php echo $udate . '\n' . $utime; ?>
 	</td>
 	<td class="lastupdated">
 		<?php echo date("n/j/y  g:i A", $row['last_updated']); ?>

@@ -28,9 +28,13 @@ document.getElementById("indivload").innerHTML='<object type="text/html" data="1
 </script>
 -->
         <script type="application/javascript">
-        $(document).ready( function () {
-    $('#table').DataTable();
+
+$(document).ready(function() {
+    $('#table').DataTable( {
+        stateSave: true
+    } );
 } );
+
         </script>
     </head>
     <body>
