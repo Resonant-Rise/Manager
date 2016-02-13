@@ -115,7 +115,7 @@ if (mysqli_num_rows($result) > 0) {
 		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=" . $id . "&user=" . $user . "' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=" . $id . "&user=" . $user . "' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=" . $id . "&user=" . $user . "' class='btn btn-danger' onclick='return confirm('are you sure?')'>BE GONE!</a>"; } else { echo "--"; } ?>
 	</td>
         </tr>
        <?php
@@ -164,7 +164,7 @@ if (mysqli_num_rows($result) > 0) {
 		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=" . $id . "&user=" . $user . "' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=" . $id . "&user=" . $user . "' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=" . $id . "&user=" . $user . "' class='btn btn-danger' onclick='return confirm('are you sure?')'>BE GONE!</a>"; } else { echo "--"; } ?>
 	</td>
         </tr>
         <?php
