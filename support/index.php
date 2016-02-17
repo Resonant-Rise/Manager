@@ -22,15 +22,17 @@ if(is_logged_in()) {
     </tr>
   </thead>
     <tbody>
-        <tr>12453</tr>
-        <tr>Test</tr>
-        <tr><span class="label label-danger">BUG</span></tr>
-        <tr>AM2 World Gen Issues</tr>
-        <tr>Urgent</tr>
-        <tr><a href="#" class="btn btn-info">View</a><a href="#" class="btn btn-success">Fixed</a><a href="#" class="btn btn-danger">Remove</a></tr>
+        <tr>
+            <td>12453</td>
+            <td>Test</td>
+            <td><span class="label label-danger">BUG</span></td>
+            <td>AM2 World Gen Issues</td>
+            <td>Urgent</td>
+            <td><a href="#" class="btn btn-info">View</a><a href="#" class="btn btn-success">Fixed</a><a href="#" class="btn btn-danger">Remove</a></td>
+        </tr>
     </tbody>
 </table>
-
+</div>
 
 
 <?php
