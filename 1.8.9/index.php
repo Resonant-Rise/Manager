@@ -146,7 +146,13 @@ if (mysqli_num_rows($result) > 0) {
 		<?php echo $row['version']; ?>
 	</td>
 	<td>
-		<?php echo $row['author']; ?>
+		<?php
+		echo '<div class="author">Authors(' . sizeof($authors1) . ')';
+		echo '<span class="authortip">';
+		foreach($authors1 as $authors) {
+			echo $authors . '<br />';
+		}
+		echo '</span></div>';?>
 	</td>
 	<td>
 		<?php if ($row['link']=="NULL") {
