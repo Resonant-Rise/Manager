@@ -18,7 +18,9 @@ if(is_logged_in()) {
       <th>Issue Type</th>
       <th>Summary</th>
       <th>Status</th>
-      <th>Action(s)</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
     <tbody>
@@ -28,7 +30,9 @@ if(is_logged_in()) {
             <td><span class="label label-danger">BUG</span></td>
             <td>AM2 World Gen Issues</td>
             <td>Urgent</td>
-            <td><a href="#" class="btn btn-info">View</a><a href="#" class="btn btn-success">Fixed</a><a href="#" class="btn btn-danger">Remove</a></td>
+            <td><a href="#" class="btn btn-info">View</a></td>
+            <td><a href="#" class="btn btn-success">Fixed</a></td>
+            <td><a href="#" class="btn btn-danger">Remove</a></td>
         </tr>
     </tbody>
 </table>
