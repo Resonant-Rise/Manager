@@ -7356,3 +7356,22 @@ a.list-group-item-danger.active:focus {
          -o-transform-origin: 100% 100%;
             transform-origin :100% 100%;
 }
+.author:hover .authortip {
+    display: block;
+}
+
+
+.authortip {
+    display: none;
+    background: rgba(10, 10, 10, 0.82);
+    margin-left: 28px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    width:auto;
+    height:auto;
+}
+
+.author {
+    margin:auto;
+}

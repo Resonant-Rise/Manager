@@ -53,16 +53,25 @@ $(document).ready(function() {
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 <!--        <li class="active"><a href="#" onclick="load_home()">1.7.10 <span class="sr-only">(current)</span></a></li>-->
-          <?php if ($_SERVER['REQUEST_URI'] == '/1.7.10/index.php') { ?>
-        <li class="active"><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 <span class="sr-only">(current)</span></a></li>
-        <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
-          <?php } elseif ($_SERVER['REQUEST_URI'] == '/1.8.9/index.php') { ?>
-        <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10 </a></li>
-        <li class="active"><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9 <span class="sr-only">(current)</span></a></li>
-          <?php } else { ?>
-          <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">1.7.10</a></li>
-        <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">1.8.9</a></li>
-          <?php } ?>
+        <li class="dropdown">
+          <a href="http://mods.resonant-rise.com/1.7.10/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">1.7.10 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+             <li><a href="http://mods.resonant-rise.com/1.7.10/index.php">View</a></li>
+            <li><a href="http://mods.resonant-rise.com/1.7.10/update.php">Update</a></li>
+            <li class="divider"></li>
+            <?php if(is_minLevel(3)) { ?> <li><a href="http://mods.resonant-rise.com/1.7.10/manage.php">Manage</a></li> <?php } ?>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="http://mods.resonant-rise.com/1.8.9/index.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">1.8.9 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+             <li><a href="http://mods.resonant-rise.com/1.8.9/index.php">View</a></li>
+            <li><a href="http://mods.resonant-rise.com/1.8.9/update.php">Update</a></li>
+            <li class="divider"></li>
+            <?php if(is_minLevel(3)) { ?> <li><a href="http://mods.resonant-rise.com/1.8.9/manage.php">Manage</a></li> <?php } ?>
+          </ul>
+        </li>
+
         <?php if(is_minLevel(2)) { ?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>

@@ -6,10 +6,12 @@
  } ?>
 
 <footer>
-    Resonant Rise Manager &copy; <?php echo auto_copyright('2015'); ?> <br />
-    Resonant Rise Manager is property of Resonant Rise. <br />
+   <div class="author">Resonant Rise Manager &copy; <?php echo auto_copyright('2015'); ?> - Hover Over Me <br />
+    <span class="authortip">Resonant Rise Manager is property of Resonant Rise. <br />
     Resonant Rise is maintained by the Resonant Rise development team.<br />
-    Minecraft mod info pulled from <a href="https://bot.notenoughmods.com/">NotEnoughMods</a>. We <div id="heart"></div> you guys.
+    Special thanks to: <a href="https://bot.notenoughmods.com/">NotEnoughMods</a> &amp; <a href="http://www.minecraftforum.net/members/citricsquid">citricsquid</a>. We <div id="heart"></div> you guys.
+</span>
+</div>
 </footer>
 </body>
 </html>

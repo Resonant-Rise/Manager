@@ -1,3 +1,8 @@
+<html>
+<head>
+<META http-equiv="refresh" content="1;URL=http://mods.resonant-rise.com/1.8.9/index.php">
+</head>
+</html>
 <?php
 include('../db.php');
  // create curl resource
@@ -36,11 +41,10 @@ version = VALUES(version),
 link = VALUES(link),
 repo = VALUES(repo),
 license = VALUES(license),
-update_time = VALUES(update_time),
-added = VALUES(added)
+update_time = VALUES(update_time)
 ";
 
-$q = mysqli_query($con, $query) or die (mysqli_error($con));
+mysqli_query($con, $query) or die (mysqli_error($con));
 
 }
 }

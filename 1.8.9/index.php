@@ -21,6 +21,7 @@ if(is_logged_in()) {
       <th>Mod Page</th>
       <th>Repo</th>
       <th>License</th>
+      <th>Download</th>
       <th>Update?</th>
       <th>Unwanted?</th>
     </tr>
@@ -42,15 +43,21 @@ if (mysqli_num_rows($result) > 0) {
 	date_default_timezone_set('America/New_York');
     while($row = mysqli_fetch_assoc($result)) {
     	$id = $row['id'];
+    	$download = $row['download_link'];
     	$timestamp = $row['update_time'];
+    	$authors1 = explode(',', $row['author']);
 
     	$date = new DateTime();
 		$date->setTimestamp($row['last_updated']);
 		$last = $date->format('M-d-Y H:i:s');
+        $ldate = $date->format('n/j/y');
+        $ltime = $date->format('n/j/y g:i A');
 
 		$date1 = new DateTime();
 		$date1->setTimestamp($row['update_time']);
 		$update = $date1->format('M-d-Y H:i:s');
+        $udate = $date1->format('n/j/y');
+        $utime = $date1->format('n/j/y g:i A');
 
         //Parse link to get FQDN
 		$link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $row['link']);
@@ -66,10 +73,10 @@ if (mysqli_num_rows($result) > 0) {
     	?>
     	<tr>
 	<td>
-		<?php echo date("n/j/y   g:i A", $timestamp); ?>
+		<?php echo $utime; ?>
 	</td>
-	<td class="lastupdated">
-		<?php echo date("n/j/y  g:i A", $row['last_updated']); ?>
+	<td>
+		<?php echo $ltime; ?>
 	</td>
 	<td>
 		<?php echo $row['name']; ?>
@@ -81,7 +88,13 @@ if (mysqli_num_rows($result) > 0) {
 		<?php echo $row['version']; ?>
 	</td>
 	<td>
-		<?php echo $row['author']; ?>
+		<?php 
+		echo '<div class="author">Authors(' . sizeof($authors1) . ')';
+		echo '<span class="authortip">';
+		foreach($authors1 as $authors) {
+			echo $authors . '<br />';
+		}
+		echo '</span></div>';?>
 	</td>
 	<td>
 		<?php if ($row['link']=="NULL") {
@@ -105,10 +118,13 @@ if (mysqli_num_rows($result) > 0) {
 		} ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=$id' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { if(empty($download)) { echo "<a href='#' class='btn btn-info disabled'>Download</a>"; } else { echo "<a href='" . $download ."' class='btn btn-info'>Download</a>"; }} else { echo "<a href='#' class='btn btn-info disabled'>Download</a>"; } ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=$id' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=" . $id . "&user=" . $user . "' class='btn btn-success' class='btn btn-danger' onclick='return confirm(\"Are you sure want to update?\")'>Submit</a>"; } else { echo "<a href='#' class='btn btn-success disabled'>Submit</a>"; } ?>
+	</td>
+	<td>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=" . $id . "&user=" . $user . "' class='btn btn-danger' onclick='return confirm(\"Are you sure you want to remove?\")'>BE GONE!</a>"; } else { echo "<a href='#' class='btn btn-danger disabled'>Submit</a>"; } ?>
 	</td>
         </tr>
        <?php
@@ -154,10 +170,13 @@ if (mysqli_num_rows($result) > 0) {
 		} ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=$id' class='btn btn-success'>Submit</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='" . $download ."' class='btn btn-info'>Download</a>"; } else { echo "<a href='#' class='btn btn-info disabled'>Download</a>"; } ?>
 	</td>
 	<td>
-		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=$id' class='btn btn-danger'>BE GONE!</a>"; } else { echo "--"; } ?>
+		<?php if(is_minLevel(2)) { echo "<a href='modupdated.php?modid=" . $id . "&user=" . $user . "' class='btn btn-success'>Submit</a>"; } else { echo "<a href='#' class='btn btn-success disabled'>Submit</a>"; } ?>
+	</td>
+	<td>
+		<?php if(is_minLevel(2)) { echo "<a href='nomod.php?modid=" . $id . "&user=" . $user . "' class='btn btn-danger' onclick='return confirm(\"are you sure?\")'>BE GONE!</a>"; } else { "<a href='#' class='btn btn-danger disabled'>BE GONE!</a>"; } ?>
 	</td>
         </tr>
         <?php
@@ -179,5 +198,4 @@ mysqli_close($con);
   </tbody>
 </table>
 </div>
-    <?php include('../footer.php');
-
+    <?php include('../footer.php'); ?>
