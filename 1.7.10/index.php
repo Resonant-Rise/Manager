@@ -2,6 +2,7 @@
 include('../db.php');
 include('../header.php');
 if(is_logged_in()) {
+    $user = userValue(null, "username");
 ?>
 <div class="container">
         <div class="alert alert-dismissible alert-warning">
