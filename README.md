@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Resonant-Rise/Manager.png?label=ready&title=Ready)](http://waffle.io/Resonant-Rise/Manager)
 # Resonant Rise Manager
 
 RRM is a management console for Resonant Rise. 
