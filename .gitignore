@@ -9,3 +9,5 @@ access_log
 config.php
 /login/database.sql
 /login/install.php
+/*.jar
+/*.jar
