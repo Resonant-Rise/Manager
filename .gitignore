@@ -11,3 +11,4 @@ config.php
 /login/install.php
 /*.jar
 /*.jar
+/*.txt
