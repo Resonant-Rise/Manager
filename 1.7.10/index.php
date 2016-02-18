@@ -2,7 +2,6 @@
 include('../db.php');
 include('../header.php');
 if(is_logged_in()) {
-    $user = userValue(null, "username");
 ?>
 <div class="container">
         <div class="alert alert-dismissible alert-warning">
@@ -10,8 +9,6 @@ if(is_logged_in()) {
   <h4>ATTENTION!</h4>
   <p>All times presented here, are in Eastern Time (GMT -5)</p>
 </div>
-
-
 <table id="table" class="table table-striped table-hover">
   <thead>
     <tr>
@@ -54,13 +51,13 @@ if (mysqli_num_rows($result) > 0) {
 		$date->setTimestamp($row['last_updated']);
 		$last = $date->format('M-d-Y H:i:s');
         $ldate = $date->format('n/j/y');
-        $ltime = $date->format('g:i A');
+        $ltime = $date->format('n/j/y g:i A');
 
 		$date1 = new DateTime();
 		$date1->setTimestamp($row['update_time']);
 		$update = $date1->format('M-d-Y H:i:s');
         $udate = $date1->format('n/j/y');
-        $utime = $date1->format('g:i A');
+        $utime = $date1->format('n/j/y g:i A');
 
         //Parse link to get FQDN
 		$link = preg_replace("/htt.{1,2}:\/\/(.+?[\.\-])*(\w{1,61}\.[a-zA-Z]{2,})\/.*/i", "$2", $row['link']);
@@ -149,7 +146,13 @@ if (mysqli_num_rows($result) > 0) {
 		<?php echo $row['version']; ?>
 	</td>
 	<td>
-		<?php echo $row['author']; ?>
+		<?php
+		echo '<div class="author">Authors(' . sizeof($authors1) . ')';
+		echo '<span class="authortip">';
+		foreach($authors1 as $authors) {
+			echo $authors . '<br />';
+		}
+		echo '</span></div>';?>
 	</td>
 	<td>
 		<?php if ($row['link']=="NULL") {
@@ -201,5 +204,4 @@ mysqli_close($con);
   </tbody>
 </table>
 </div>
-    <?php include('../footer.php');
-
+    <?php include('../footer.php'); ?>
