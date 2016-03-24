@@ -12,6 +12,7 @@
     <nav class="navbar navbar-default">
       <article class="container-fluid">
         <article class="navbar-header">
+         <h1>HI Evryone</h1>
 
 
    </body>
