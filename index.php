@@ -12,7 +12,7 @@
     <nav class="navbar navbar-default">
       <article class="container-fluid">
         <article class="navbar-header">
-         <h1>HI Evryone</h1>
+         <h1>Hi everyone Welcome to the new site Tell us what you think</h1>
 
 
    </body>
