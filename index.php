@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="jumbotron">
-          <h1>Oh, Hello there</h1>
+          <h1>Oh, Hello there test</h1>
           <p>Resonant Rise Manager is an application built by hand and with love from the Resonant Rise Development Team.</p>
           <p>With this application, it allows the developers to update the pack a little quicker.</p>
           <p>Plus, there are a lot of features coming soon.</p>
