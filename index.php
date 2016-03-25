@@ -8,7 +8,6 @@
    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
    <!-- <link rel="stylesheet" type="text/css" href="css/bootswatch.scss">
    <link rel="stylesheet" type="text/css" href="css/variables.scss"> -->
-  </head>
    <body>
       <nav class="navbar navbar-default navbar-fixed-top ">
        <div id="nav-top" class="container-fluid">
