@@ -10,7 +10,7 @@
    <link rel="stylesheet" type="text/css" href="css/slate.css">
    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
    <body>
-     <nav class="navbar navbar-default" style="border:none;height:10%;   background-color: transparent; background: transparent;border-color: transparent;">
+     <nav class="navbar navbar-default navbar-fixed-top" style="border:none;height:10%;   background-color: transparent; background: transparent;border-color: transparent;background-color:#2e5096;">
        <article class="container-fluid">
          <section class="navbar-header">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
