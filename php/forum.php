@@ -8,42 +8,107 @@
    <link rel="stylesheet/less" type="text/css" href="../css/bootswatch.less">
    <link rel="stylesheet/less" type="text/css" href="../css/variables.less">
    <link rel="stylesheet" type="text/css" href="../css/slate.css">
+   <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+
    <body>
      <nav class="navbar navbar-default" style="border:none;">
-       <div class="container-fluid">
-         <div class="navbar-header">
-           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="index.php" style="padding: 20px 15px;">Brand</a>
-         </div>
-         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           <ul class="nav navbar-nav navbar-right">
-             <li><a href="forum.php">Forum</a></li>
-             <li><a href="modpacks.php">Modpacks</a></li>
-             <li><a href="login.php">Login</a></li>
-           </ul>
-         </div>
-       </div>
-     </nav>
-      <div class="container">
-        <div class="panel2 panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Welcome!</h3>
-          </div>
-        </div>
-        <div class="jumbotron">
-          <h1>Oh, Hello there</h1>
-          <p>Resonant Rise Manager is an application built by hand and with love from the Resonant Rise Development Team.</p>
-          <p>With this application, it allows the developers to update the pack a little quicker.</p>
-          <p>Plus, there are a lot of features coming soon.</p>
-          <p>This is an alpha build so it may be broken in some parts</p>
-        </div>
-      </div>
-    </div>
+       <div class="container" style="margin-top: 35px">
+  <div class="page-header page-heading">
+    <h1 class="pull-left">Forums</h1>
+    <ol class="breadcrumb pull-right where-am-i">
+      <li><a href="#">Forums</a></li>
+      <li class="active">List of topics</li>
+    </ol>
+    <div class="clearfix"></div>
+  </div>
+  <p class="lead">This is the right place to discuss any ideas, critics, feature requests and all the ideas regarding our website. Please follow the forum rules and always check FAQ before posting to prevent duplicate posts.</p>
+  <table class="table forum table-striped">
+    <thead>
+      <tr>
+        <th class="cell-stat"></th>
+        <th>
+          <h3>Important</h3>
+        </th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+        <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+        <td>
+          <h4><a href="#">Frequently Asked Questions</a><br><small>Some description</small></h4>
+        </td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">9 542</a></td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">89 897</a></td>
+        <td class="hidden-xs hidden-sm">by <a href="#">John Doe</a><br><small><i class="fa fa-clock-o"></i> 3 months ago</small></td>
+      </tr>
+      <tr>
+        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+        <td>
+          <h4><a href="#">Important changes</a><br><small>Category description</small></h4>
+        </td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 1 years ago</small></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table forum table-striped">
+    <thead>
+      <tr>
+        <th class="cell-stat"></th>
+        <th>
+          <h3>Suggestions</h3>
+        </th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+        <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-center"><i class="fa fa-heart fa-2x text-primary"></i></td>
+        <td>
+          <h4><a href="#">More more more</a><br><small>Category description</small></h4>
+        </td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 3 months ago</small></td>
+      </tr>
+      <tr>
+        <td class="text-center"><i class="fa fa-magic fa-2x text-primary"></i></td>
+        <td>
+          <h4><a href="#">Haha</a><br><small>Category description</small></h4>
+        </td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 1 years ago</small></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table forum table-striped">
+    <thead>
+      <tr>
+        <th class="cell-stat"></th>
+        <th>
+          <h3>Open discussion</h3>
+        </th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Topics</th>
+        <th class="cell-stat text-center hidden-xs hidden-sm">Posts</th>
+        <th class="cell-stat-2x hidden-xs hidden-sm">Last Post</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td colspan="4" class="center">No topics have been added yet.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
    </body>
     <footer>
       <script src="../js/jquery-2.2.2.min.js"></script>

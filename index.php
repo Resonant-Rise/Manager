@@ -1,15 +1,21 @@
 <?php
 
  ?>
- <html>
+ <html id="index-background">
+  <div class="fullscreen-bg">
+    <video loop muted autoplay poster="img/background.jpg" class="fullscreen-bg__video">
+        <source src="videos/background.mp4" type="video/mp4">
+    </video>
+  </div>
   <head>
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
    <link rel="stylesheet/less" type="text/css" href="css/bootswatch.less">
    <link rel="stylesheet/less" type="text/css" href="css/variables.less">
    <link rel="stylesheet" type="text/css" href="css/slate.css">
+   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
    <body>
-     <nav class="navbar navbar-default" style="border:none;">
+     <nav class="navbar navbar-default" style="border:none;height:10%;   background-color: transparent; background: transparent;border-color: transparent;">
        <article class="container-fluid">
          <section class="navbar-header">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -18,7 +24,9 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a class="navbar-brand" href="index.php" style="padding: 20px 15px;">Brand</a>
+           <a class="navbar-brand" href="index.php" style="padding:5px;">
+            <img src="img/logo.jpg" alt="Brand" style="width:25% ;"></img>
+           </a>
          </section>
          <section class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
