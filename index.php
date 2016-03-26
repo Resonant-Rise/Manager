@@ -1,13 +1,8 @@
 <?php
 
  ?>
- <html id="index-background">
-  <div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/background.jpg" class="fullscreen-bg__video">
-        <source src="videos/background.mp4" type="video/mp4">
-    </video>
-  </div>
-  <head>
+ <html>
+ <head>
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
    <link rel="stylesheet/less" type="text/css" href="css/bootswatch.less">
