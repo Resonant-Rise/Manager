@@ -5,27 +5,29 @@
   <head>
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-   <!-- <link rel="stylesheet" type="text/css" href="css/bootswatch.scss">
-        <link rel="stylesheet" type="text/css" href="css/variables.scss"> -->
+   <link rel="stylesheet/less" type="text/css" href="css/bootswatch.less">
+   <link rel="stylesheet/less" type="text/css" href="css/variables.less">
+   <link rel="stylesheet" type="text/css" href="css/slate.css">
    <body>
-     <div id="base-background">
-      <nav class="navbar navbar-default navbar-static-top">
-       <div id="nav-top" class="container-fluid">
-         <div class="navbar-inner">
-           <div class="navbar-header">
-             <a id="brand-image" class="navbar-brand" href="index.php">
-               <img alt="Brand" src="img/logo.jpg">
-             </a>
-           </div>
-           <ul id="navlink-list" class="nav navbar-nav">
-             <li class="active"><a href="#">Home</a></li>
+     <nav class="navbar navbar-default" style="border:none;">
+       <div class="container-fluid">
+         <div class="navbar-header">
+           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="index.php" style="padding: 20px 15px;">Brand</a>
+         </div>
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
              <li><a href="#">Link</a></li>
-             <li><a href="#">Link</a></li>
-             <li><a href="#">Link</a></li>
+           </ul>
          </div>
        </div>
-      </nav>
+     </nav>
       <div class="container">
         <div class="panel2 panel-primary">
           <div class="panel-heading">
@@ -37,7 +39,7 @@
           <p>Resonant Rise Manager is an application built by hand and with love from the Resonant Rise Development Team.</p>
           <p>With this application, it allows the developers to update the pack a little quicker.</p>
           <p>Plus, there are a lot of features coming soon.</p>
-          <p>This is an alpha build so it may be broken in some parts</p>         
+          <p>This is an alpha build so it may be broken in some parts</p>
         </div>
       </div>
     </div>
