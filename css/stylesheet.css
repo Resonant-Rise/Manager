@@ -13,4 +13,14 @@
 }
 #brand-image{
   float: none;
+
+}
+#navlink-list{
+  text-align: center;
+  padding-top: 20px;
+  float:right;
+}
+#base-background{
+  background-color: #000;
+  background-size: 100%;
 }
