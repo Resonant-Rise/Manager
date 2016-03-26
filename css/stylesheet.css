@@ -1,0 +1,20 @@
+#nav-sidebar{
+  padding-bottom: 100%;
+  margin-right: 85%;
+
+}
+#sidebar-profile{
+  vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+
+
+}
+#profile-picture{
+  width:100%;
+  border: 5px solid #FFF;
+}
+#profile-name{
+    display: block;
+}
