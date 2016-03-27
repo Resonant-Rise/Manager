@@ -3,13 +3,12 @@
   border:none;
   height:10%;
   background: transparent;
-  background-color:#2e5096;
+  background-color: rgba(46,80,150,0.5);
 }
-.nav-text{
-  color: #fff;
+/* Bootstrpa navbar text color override */
+.navbar-default .navbar-nav > li > a{
+  color: #fff !important;
   text-align: justify;
-  font-family: "Times New Roman", Times, serif;
-
 }
 #nav-sidebar {
   padding-bottom: 100%;
@@ -51,12 +50,12 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: rgba(28, 28, 28, 1);
 }
 
 @media(min-width:768px) {
     body {
-        margin-top: 50px;
+        margin-top: 82px;
     }
 }
 
