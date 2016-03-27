@@ -5,28 +5,21 @@
  <head>
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-   <link rel="stylesheet/less" type="text/css" href="css/bootswatch.less">
-   <link rel="stylesheet/less" type="text/css" href="css/variables.less">
-   <link rel="stylesheet" type="text/css" href="css/slate.css">
    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
    <body>
-     <nav class="navbar navbar-default navbar-fixed-top" style="border:none;height:10%;   background-color: transparent; background: transparent;border-color: transparent;background-color:#2e5096;">
+     <nav id="navbar_default" class="navbar navbar-default navbar-fixed-top">
        <article class="container-fluid">
          <section class="navbar-header">
            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-             <span class="sr-only">Toggle navigation</span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
            </button>
            <a class="navbar-brand" href="index.php" style="padding:5px;">
             <img src="img/logo.jpg" alt="Brand" style="width:25% ;"></img>
            </a>
          </section>
-         <section class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           <ul class="nav navbar-nav navbar-right">
-             <li><a href="php/forum.php">Forum</a></li>
-             <li><a href="#">Modpacks</a></li>
+         <section class="collapse navbar-collapse">
+           <ul class="nav navbar-nav navbar-right" style="padding-top:15px;">
+             <li class="nav-text"><a href="php/forum.php">Forum</a></li>
              <li><a href="php/login.php">Login</a></li>
            </ul>
          </section>

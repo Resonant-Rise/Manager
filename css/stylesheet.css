@@ -1,3 +1,16 @@
+#navbar_default{
+  color: #fff;
+  border:none;
+  height:10%;
+  background: transparent;
+  background-color:#2e5096;
+}
+.nav-text{
+  color: #fff;
+  text-align: justify;
+  font-family: "Times New Roman", Times, serif;
+
+}
 #nav-sidebar {
   padding-bottom: 100%;
   margin-right: 85%;
