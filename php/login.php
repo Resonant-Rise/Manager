@@ -17,8 +17,8 @@
                   <h1 style="float:right;padding-right:85px;color: #fff;"> Welcome Back</h1>
                  <form class="form-horizontal" method="post" action="editor.php">
                    <div class="form-group">
-                     <a  href="index.php" style="width:15%;">
-                       <img src="../img/logo.jpg" alt="Brand" style="width:15% ;"></img>
+                     <a href="index.php" >
+                       <img id="logo" src="../img/logo.jpg" alt="Brand"></img>
                      </a>
                    </div>
                    <div class="form-group">
@@ -36,7 +36,7 @@
                    <div class="form-group">
                      <div class="col-sm-offset-2 col-sm-10">
                        <div class="checkbox">
-                         <label>
+                         <label style="color:#fff;">
                            <input type="checkbox"> Remember me
                          </label>
                        </div>

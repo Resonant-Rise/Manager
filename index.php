@@ -14,12 +14,12 @@
        <article class="container-fluid">
          <section class="navbar-header">
            <a class="navbar-brand" href="index.php" style="padding:5px;">
-            <img src="img/logo.jpg" alt="Brand" style="width:25% ;"></img>
+            <img id="nav_logo" src="img/logo.jpg" alt="Brand"></img>
            </a>
          </section>
          <section class="collapse navbar-collapse">
            <ul class="nav navbar-nav navbar-right" style="padding-top:15px;">
-             <li><a href="php/login.php">Partners</a></li>
+             <li><a href="php/login.php">Link</a></li>
              <li><a href="php/forum.php">Forum</a></li>
              <li><a href="php/login.php">Login</a></li>
            </ul>
