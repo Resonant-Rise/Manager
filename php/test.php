@@ -5,9 +5,9 @@
     <title>Resonant Rise Buisness</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+   <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css">
+   <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
   </head>
    <body>
      <nav id="navbar_default" class="navbar navbar-default navbar-fixed-top">
@@ -145,7 +145,7 @@
       </article>
    </body>
     <footer>
-      <script src="js/jquery-2.2.2.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
+      <script src="../js/jquery-2.2.2.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
     </footer>
 </html>
