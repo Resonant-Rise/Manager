@@ -14,7 +14,7 @@
        <article class="container-fluid">
          <section class="navbar-header">
            <a class="navbar-brand" href="index.php" style="padding:5px;">
-            <img id="nav_logo" src="../img/logo.jpg" alt="Brand"></img>
+            <img id="nav_logo" src="img/logo.jpg" alt="Brand"></img>
            </a>
          </section>
          <section class="collapse navbar-collapse">
