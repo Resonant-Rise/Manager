@@ -109,23 +109,9 @@
                     <input type="text" class="form-control" data-minlength="5" name="Zip_Code" value="<?php echo $_POST['Zip_Code']; ?>" required>
                    </label>
                    <label class="control-label">
-                    ID type
-                    <input type="text" name="ID_Type" class="form-control" value="<?php echo $_POST['ID_Type']; ?>" >
+                    T-ShirtSize
+                    <input type="text" name="T-ShirtSize" class="form-control" value="<?php echo $_POST['T-ShirtSize']; ?>">
                    </label>
-                   <label class="control-label">
-                    ID Number
-                    <input type="text" name="ID_Number" class="form-control" value="<?php echo $_POST['ID_Number']; ?>">
-                   </label>
-                   <label class="control-label">
-                    Comments
-                    <input type="text" name="Comments" class="form-control" value="<?php echo $_POST['Comments']; ?>">
-                   </label>
-                   <label  class="control-label">
-                    Password
-                    <input type="password" name="Password" class="form-control" placeholder="Password" required>
-                    <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
-                   </label>
-                  
                    <button type="submit" class="btn btn-primary"> Submit </button>
                    <button class="btn btn-danger" type="reset"> Reset </button>
                   </form>
