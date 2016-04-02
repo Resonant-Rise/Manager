@@ -112,6 +112,10 @@
                     T-ShirtSize
                     <input type="text" name="T-ShirtSize" class="form-control" value="<?php echo $_POST['T-ShirtSize']; ?>">
                    </label>
+                     <label class="control-label">
+                    Minecraft Name
+                    <input type="text" name="T-ShirtSize" class="form-control" value="<?php echo $_POST['Minecraft-Name']; ?>">
+                   </label>
                    <button type="submit" class="btn btn-primary"> Submit </button>
                    <button class="btn btn-danger" type="reset"> Reset </button>
                   </form>
