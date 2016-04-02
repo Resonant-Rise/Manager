@@ -14,7 +14,7 @@
        <article class="container-fluid">
          <section class="navbar-header">
            <a class="navbar-brand" href="index.php" style="padding:5px;">
-            <img id="nav_logo" src="img/logo.jpg" alt="Brand"></img>
+            <img id="nav_logo" src="../img/logo.jpg" alt="Brand"></img>
            </a>
          </section>
          <section class="collapse navbar-collapse">
@@ -125,20 +125,7 @@
                     <input type="password" name="Password" class="form-control" placeholder="Password" required>
                     <input type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password" required>
                    </label>
-                   <div class="radio">
-                    <label>
-                     <input type="radio" name="numdays" value="30">
-                     30 Days
-                    </label>
-                    <label>
-                     <input type="radio" name="numdays" value="60">
-                     60 Days
-                    </label>
-                    <label>
-                     <input type="radio" name="numdays" value="90">
-                     90 Days
-                    </label>
-                   </div>
+                  
                    <button type="submit" class="btn btn-primary"> Submit </button>
                    <button class="btn btn-danger" type="reset"> Reset </button>
                   </form>
