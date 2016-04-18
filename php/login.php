@@ -18,7 +18,7 @@
                  <form class="form-horizontal" method="post" action="editor.php">
                    <div class="form-group">
                      <a href="index.php" >
-                       <img id="logo" src="../img/logo.jpg" alt="Brand"></img>
+                       <img style="width:50%;" src="../img/logo.jpg" alt="Brand"></img>
                      </a>
                    </div>
                    <div class="form-group">
