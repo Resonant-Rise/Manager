@@ -1,0 +1,10 @@
+[{
+	"modname": "Test", /* Mod Name */
+	"modid": "1232-test", /* Must be either #####-text or just text */
+	"location": "curse" /* Options: Curse, CurseForge, ModsIO, Other */
+},
+{
+	"modname": "Test1", /* Mod Name */
+	"modid": "1232-test1", /* Must be either #####-text or just text */
+	"location": "curseforge" /* Options: Curse, CurseForge, ModsIO, Other */
+}]
