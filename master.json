@@ -1,0 +1,233 @@
+[
+{
+	"modname": "JourneyMap",
+	"modid": "journeymap-32274",
+	"location": "curse",
+	"type": "client,map",
+	"pack": "RR"
+},
+{
+	"modname": "Waila Harvestability",
+	"modid": "waila-harvestability",
+	"location": "curse",
+	"type": "client,tooltip",
+	"pack": "RR"
+},
+{
+	"modname": "Custom Main Menu",
+	"modid": "226406-custom-main-menu",
+	"location": "curse",
+	"type": "client,misc",
+	"pack": "RR"
+},
+{
+	"modname": "Resource Loader",
+	"modid": "226447-resource-loader",
+	"location": "curse",
+	"type": "client,misc",
+	"pack": "RR"
+},
+{
+	"modname": "McJtyLib",
+	"modid": "233105-mcjtylib",
+	"location": "curse",
+	"type": "API",
+	"pack": "RR"
+},
+{
+	"modname": "RFTools",
+	"modid": "224641-rftools",
+	"location": "curse",
+	"type": "energy",
+	"pack": "RR"
+},
+{
+	"modname": "applecore",
+	"modid": "224472-applecore",
+	"location": "curse",
+	"type": "API",
+	"pack": "RR"
+},
+{
+	"modname": "VeinMiner",
+	"modid": "veinminer",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+},
+{
+	"modname": "Just Enough Items (JEI)",
+	"modid": "238222-just-enough-items-jei",
+	"location": "curse",
+	"type": "info",
+	"pack": "RR"
+},
+{
+	"modname": "Random Things",
+	"modid": "random-things",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+},
+{
+	"modname": "Bagginses",
+	"modid": "223005-bagginses",
+	"location": "curse",
+	"type": "tools",
+	"pack": "RR"
+},
+{
+	"modname": "LunatriusCore",
+	"modid": "225605-lunatriuscore",
+	"location": "curse",
+	"type": "API",
+	"pack": "RR"
+},
+{
+	"modname": "Ender Zoo",
+	"modid": "225247-ender-zoo",
+	"location": "curse",
+	"type": "mobs",
+	"pack": "RR"
+},
+{
+	"modname": "VoxelMap",
+	"modid": "225179-voxelmap",
+	"location": "curse",
+	"type": "client,map",
+	"pack": "RR"
+},
+{
+	"modname": "Progressive Automation",
+	"modid": "220606-progressive-automation-early-miner",
+	"location": "curse",
+	"type": "technology",
+	"pack": "RR"
+},
+{
+	"modname": "InGame Info XML",
+	"modid": "225604-ingame-info-xml",
+	"location": "curse",
+	"type": "cosmetic",
+	"pack": "RR"
+},
+{
+	"modname": "Roguelike Dungeons",
+	"modid": "221585-roguelike-dungeons",
+	"location": "curse",
+	"type": "Adventure",
+	"pack": "RR"
+},
+{
+	"modname": "Chameleon",
+	"modid": "230497-chameleon",
+	"location": "curse",
+	"type": "API",
+	"pack": "RR"
+},
+{
+	"modname": "Botania Unofficial",
+	"modid": "241973-botania-unofficial",
+	"location": "curse",
+	"type": "magic",
+	"pack": "RR"
+},
+{
+	"modname": "KleeSlabs",
+	"modid": "2241895-kleeslabs",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+},
+{
+	"modname": "MmmMmmMmmMmm",
+	"modid": "225738-mmmmmmmmmmmm",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+},
+{
+	"modname": "Psi",
+	"modid": "241665-psi",
+	"location": "curse",
+	"type": "technology",
+	"pack": "RR"
+},
+{
+	"modname": "Enchiridion",
+	"modid": "enchiridion",
+	"location": "curse",
+	"type": "API",
+	"pack": "RR"
+},
+{
+	"modname": "Neat",
+	"modid": "enchiridion",
+	"location": "curse",
+	"type": "Info",
+	"pack": "RR,BR"
+},
+{
+	"modname": "TechReborn",
+	"modid": "233564-techreborn",
+	"location": "curse",
+	"type": "technology",
+	"pack": "RR"
+},
+{
+	"modname": "OreDictionaryConverter",
+	"modid": "227564-oredictionaryconverter",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR,BR"
+},
+{
+	"modname": "Super Crafting Frame",
+	"modid": "super-crafting-frame",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+},
+{
+	"modname": "ActuRRy Additions",
+	"modid": "228404-actuRRy-additions",
+	"location": "curse",
+	"type": "technology",
+	"pack": "RR"
+},
+{
+	"modname": "Crafting Tweaks",
+	"modid": "233071-crafting-tweaks",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+},
+{
+	"modname": "Chunk Animator",
+	"modid": "236484-chunk-animator",
+	"location": "curse",
+	"type": "cosmetic",
+	"pack": "RR"
+},
+{
+	"modname": "Thut's Elevators",
+	"modid": "224375-thuts-elevators",
+	"location": "curse",
+	"type": "transport",
+	"pack": "RR"
+},
+{
+	"modname": "ThutCore",
+	"modid": "224428-thutcore",
+	"location": "curse",
+	"type": "API",
+	"pack": "RR"
+},
+{
+	"modname": "MineMenu",
+	"modid": "222378-minemenu",
+	"location": "curse",
+	"type": "misc",
+	"pack": "RR"
+}
+]
