@@ -37,14 +37,13 @@ if (mysqli_num_rows($result) > 0) {
         $license = mysqli_real_escape_string($con, isitempty($json['license']));
         $download = mysqli_real_escape_string($con, isitempty($json['download']['url']));
         
-        $query = "INSERT INTO `1102` (release,author,repo,license,download_link) VALUES ('".$release."','".$authorfinal."','".$project."','".$license."','".$download."')
-        ON DUPLICATE KEY UPDATE 
-        release = VALUES(release),
-        download_link = VALUES(download_link),
-        repo = VALUES(repo),
-        license = VALUES(license),
-        author = VALUES(author) where id=$id
-        ";
+        $query = "INSERT INTO `1102` (ver,author,repo,license,download_link) VALUES ('$release','$authorfinal','$project','$license','$download')
+        ON DUPLICATE KEY UPDATE
+        ver = '$release',
+        download_link = '$download',
+        repo = '$project',
+        license = '$license',
+        author = '$authorfinal'";
         
         
 //        $sql = mysqli_real_escape_string($con, $query);
@@ -55,4 +54,6 @@ if (mysqli_num_rows($result) > 0) {
     
 
     }
+
+    echo 'Done!';
 }
