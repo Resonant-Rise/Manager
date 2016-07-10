@@ -11,14 +11,14 @@ function isitempty($val){
     if (trim($val) === ''){$val = "NULL";}
     return $val;
 }
-$query = "SELECT id,name,mcf_link,update_time FROM `1102` where id=1192";
+$query = "SELECT id,modname,mcf_link,update_time FROM `1102` where id=1192";
 $result = mysqli_query($con, $query);
 
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
 		$link = $row['mcf_link'];
 		$id = $row['id'];
-        $modname = $row['name'];
+        $modname = $row['modname'];
         
         $file = file_get_contents($link);
         $json = json_decode($file, true);
@@ -40,7 +40,7 @@ if($updatedat > $current_updateat) {
         $license = mysqli_real_escape_string($con, isitempty($json['license']));
         $download = mysqli_real_escape_string($con, isitempty($json['download']['url']));
         
-        $query = "INSERT INTO `1102` (name,version_type,author,repo,license,download_link,update_time) VALUES ('$modname','$release','$authorfinal','$project','$license','$download','$updatedat1'')
+        $query = "INSERT INTO `1102` (modname,version_type,author,repo,license,download_link,update_time) VALUES ('$modname','$release','$authorfinal','$project','$license','$download','$updatedat1')
         ON DUPLICATE KEY UPDATE
         version_type = '$release',
         download_link = '$download',
